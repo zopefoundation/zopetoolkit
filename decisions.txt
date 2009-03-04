@@ -1,0 +1,9 @@
+Decisions of the Zope Framework Steering Group
+==============================================
+
+* ZMI related code shall not be part of the Zope Framework, and we
+  shall strive to remove it.
+
+* If zope.deferredimport is used in a package merely to avoid the use
+  of ``from`` imports, then instead we will use ``from`` imports to
+  get rid of this dependency.
