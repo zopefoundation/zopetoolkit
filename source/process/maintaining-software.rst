@@ -389,10 +389,10 @@ or tag):
 
     * The list of `Trove classifiers`_ (``classifiers`` parameter)
       should be adjusted according to the specific package, of course.
-      Most of the software in the Zope repository is intended to be
-      used with the Zope 2 or Zope 3 framework (sometimes for both),
-      but not all (well-known exceptions are ``zope.interface`` or the
-      ``ZODB``).
+      Much of the software in the Zope repository is intended to be
+      used with the Zope 2 or Zope Framework (sometimes for both), we
+      aim to make more and more software available for independent use
+      (well-known examples are ``zope.interface`` or the ``ZODB``).
 
     * ``description`` should be a one-sentence description of the
       package while ``long_description`` is best taken from the

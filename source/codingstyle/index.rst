@@ -2,7 +2,7 @@ Coding style
 ============
 
 The coding style is intended to support a consistent code base by laying
-out rules for how to work on Zope 3 code, for example how to structure
+out rules for how to work on Zope code, for example how to structure
 files, format your source code and naming things.
 
 .. note::

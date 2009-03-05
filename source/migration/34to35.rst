@@ -1,7 +1,8 @@
-Migrating from Zope 3.4 to Zope 3.5
-===================================
+Migrating from Zope 3.4 to Zope Framework 3.5
+=============================================
 
-This document covers major changes since Zope 3.4 release that can lead to
+This document covers major changes from the Zope 3.4 release to the
+Zope Framework 3.5 release that can lead to
 backward-incompatibilities.
 
 .. contents::
@@ -9,7 +10,19 @@ backward-incompatibilities.
 Introduction
 ------------
 
-The 3.5 release of the Zope framework contains a number of
+The Zope Framework 3.5 release is the first release of the Zope
+Framework. The Zope Framework really is just a collection of libraries
+managed together by the Zope developers. We typically treat each
+library independently, so you would like to look at the CHANGES.txt in
+each library for updates. Here we note larger changes, especially ones
+that affect multiple libraries.
+
+The Zope Framework cannot be installed directly except as individual
+libraries (such as ``zope.component``). To install it you typically
+would install a framework or application that makes use of these
+libraries. The Zope project itself manages Zope 3, Zope 2, or Grok.
+
+The 3.5 release of the Zope Framework contains a number of
 refactorings that are aimed to clean up dependencies between pieces of
 code. Many packages in ``zope.app`` have had their code moved to
 existing or newly created packages in the ``zope`` namespace. These
@@ -133,20 +146,22 @@ conditional copy functionality based on object locations, that old
 you don't use ZCML configuration of ``zope.location``, you may need to
 register ``zope.location.pickling.LocationCopyHook`` yourself.
 
-The ``zope.location.pickling.locationCopy`` and ``zope.location.pickling.CopyPersistent``
-are now deprecated in favor of ``zope.copy`` and were replaced by deprecated
-imports. See ``zope.copy`` package documentation for information on how to
-use the new mechanism.
+The ``zope.location.pickling.locationCopy`` and
+``zope.location.pickling.CopyPersistent`` are now deprecated in favor
+of ``zope.copy`` and were replaced by deprecated imports. See
+``zope.copy`` package documentation for information on how to use the
+new mechanism.
 
-The new version of the ``zc.copy`` package now only contains backward-compatibility
-imports and is deprecated. ``zope.copy`` should be preferred for new developments.
+The new version of the ``zc.copy`` package now only contains
+backward-compatibility imports and is deprecated. ``zope.copy`` should
+be preferred for new developments.
 
 ZODB 3.9 FileStorage native blob support
 ----------------------------------------
 
-The FileStorage component of ZODB 3.9 used in Zope 3.5 now supports
-blobs natively, so you don't need to use BlobStorage proxy for it
-anymore.
+The FileStorage component of ZODB 3.9 used in Zope Framework 3.5 now
+supports blobs natively, so you don't need to use BlobStorage proxy
+for it anymore.
 
 Thus, you can specify blob directory directly to FileStorage. If you
 use ZConfig, that means something like this::

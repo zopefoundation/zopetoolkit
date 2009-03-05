@@ -1,8 +1,8 @@
-Accessing the Zope 3 repository
-===============================
+Accessing the Zope Framework repository
+=======================================
 
-The Zope 3 code is maintained via Subversion in the official Zope repository at
-svn://svn.zope.org/repos/main.
+The Zope Framework code is maintained via Subversion in the official
+Zope repository at svn://svn.zope.org/repos/main.
 
 Code browsing
 -------------

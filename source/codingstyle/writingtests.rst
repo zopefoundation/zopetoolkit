@@ -45,7 +45,7 @@ is often best to implement such tests in separate mixin classes,
 one class per Interface.  WritingInterfaceTests expands
 on this concept in more detail.
 
-Within the unit tests themselves, the Zope3 style is to use
+Within the unit tests themselves, the Zope style is to use
 the positive rather than the double negative assertions.
 Thus, use ``assertEqual`` rather than ``failUnlessEqual``, 
 ``assertRaises`` rather than ``failUnlessRaises``, and ``assert_``

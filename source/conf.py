@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Zope 3 Documentation documentation build configuration file, created by
+# Zope Framework Documentation documentation build configuration file, created by
 # sphinx-quickstart on Mon Feb  2 16:17:40 2009.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -153,7 +153,7 @@ html_static_path = ['_static']
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Zope3Documentationdoc'
+htmlhelp_basename = 'ZopeFrameworkdoc'
 
 
 # Options for LaTeX output
@@ -168,7 +168,8 @@ htmlhelp_basename = 'Zope3Documentationdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'Zope3Documentation.tex', ur'Zope 3 Documentation Documentation',
+  ('index', 'ZopeFrameworkDocumentation.tex',
+   ur'Zope Framework Documentation',
    ur'Zope Developers', 'manual'),
 ]
 
