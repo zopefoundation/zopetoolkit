@@ -10,6 +10,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   about/index
    process/index
    codingstyle/index
    migration/index
