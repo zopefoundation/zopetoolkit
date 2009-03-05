@@ -16,10 +16,8 @@ managed by the Zope project: Zope 2, Zope 3 and Grok. If you install
 one of these systems, you will get the Zope Framework along with it
 automatically.
 
-The `Zope Framework Steering Group`_ is there to help guide the development
+The :ref:`steering-group` is there to help guide the development
 of the Zope Framework.
-
-.. _`Zope Framework Steering Group`: ../steeringgroup/index
 
 .. toctree::
    :maxdepth: 1

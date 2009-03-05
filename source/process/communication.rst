@@ -11,6 +11,8 @@ We use #zope3-dev on the IRC network provided by `freenode.net
 <http://www.freenode.net>`_.
 
 
+.. _mailing-list:
+
 Mailing list
 ------------
 
