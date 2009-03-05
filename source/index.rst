@@ -13,6 +13,7 @@ Contents:
    process/index
    codingstyle/index
    migration/index
+   steeringgroup/index
 
 Indices and tables
 ==================
