@@ -13,6 +13,7 @@ done through the zope-dev mailing list (:ref:`mailing-list`).
     :maxdepth: 1
 
     decisions
+    openissues
     decisionmaking
     members
 
