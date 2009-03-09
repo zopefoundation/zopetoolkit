@@ -27,7 +27,7 @@ Decisions of the Zope Framework Steering Group
   least consider alternatives. Perhaps a better home can be found for
   this code.
 
-* on a case-by-case basis we can consider removing extra dependencies
-  for particular Zope Framework packages, just like what we're doing
-  right now for zope.component. We'll discuss that whenever
-  needed.
+* We can consider removing extra dependencies for particular Zope
+  Framework packages in order to make the dependency graph easier to
+  reason about. We will do this on a case by case basis though.
+  
