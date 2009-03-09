@@ -15,3 +15,19 @@ Decisions of the Zope Framework Steering Group
   special slugs directory in a Zope installation are not in use
   anymore.  They should be removed. Typically they look like
   ``zope.foo-configure.zcml``.
+
+* we are going to work at getting rid of the zope.app.testing extra by
+  distributing its facilities into individual zope.*
+  packages. Hopefully we can get a clear consensus on this one from
+  the people who object to the general policy.
+
+* if you think a new "extra" dependency is needed in a Zope Framework
+  package, and you're not just moving stuff between packages but
+  actually developing new code, bring it up on zope-dev so we can at
+  least consider alternatives. Perhaps a better home can be found for
+  this code.
+
+* on a case-by-case basis we can consider removing extra dependencies
+  for particular Zope Framework packages, just like what we're doing
+  right now for zope.component. We'll discuss that whenever
+  needed.
