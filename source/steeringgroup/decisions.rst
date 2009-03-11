@@ -31,3 +31,21 @@ Decisions of the Zope Framework Steering Group
   Framework packages in order to make the dependency graph easier to
   reason about. We will do this on a case by case basis though.
   
+* In namespace package's ``__init__.py`` we have been using the following
+  boilerplate code::
+
+    try:
+        import pkg_resources
+        pkg_resources.declare_namespace(__name__)
+    except ImportError:
+        import pkgutil
+        __path__ = pkgutil.extend_path(__path__, __name__)
+
+  Since ``setuptools`` is a dependency of our packages anyway, we 
+  can instead do the following::
+
+      __import__('pkg_resources').declare_namespace(__name__)
+
+  Feel free to use that and also feel free to simplify existing
+  ``__init__.py`` modules. Just make sure ``setuptools`` is a declared
+  dependency of the package.
