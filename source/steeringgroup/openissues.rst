@@ -10,6 +10,10 @@ steering group will want to make a decision soon.
 * Produce a list of `the framework packages`. See
   http://mail.zope.org/pipermail/zope-dev/2009-March/035078.html.
 
+* Document usage of compattest. `compattest` is being mentioned for
+  test runs and should be documented as an (optional) part of the framework
+  development.
+
 .. note:: 
    We may want to move over the management of such issues to
    launchpad? Not?
