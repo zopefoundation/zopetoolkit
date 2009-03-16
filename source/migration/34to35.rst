@@ -97,21 +97,6 @@ package. with backwards compatibility imports left in place. Review
 your imports from ``zope.app.component`` to see whether they cannot
 come directly from ``zope.site`` instead.
 
-zope.app.security -> zope.security
-----------------------------------
-
-The implementation of the ``<module>`` ZCML directive moved from this
-package to ``zope.security``. Packages that relied on
-``zope.app.security`` to obtain this directive should declare a direct
-dependency on ``zope.security``, and it may be possible to lose the
-dependency on ``zope.app.security`` altogether.
-
-
-The ``protectclass`` module in this package has moved to
-``zope.security``, with backwards compatibility imports left in
-place. Review your imports from ``zope.app.security`` to see whether
-they cannot come directly from ``zope.security`` instead.
-
 zope.app.folder -> zope.site, zope.container
 --------------------------------------------
 
@@ -155,6 +140,63 @@ new mechanism.
 The new version of the ``zc.copy`` package now only contains
 backward-compatibility imports and is deprecated. ``zope.copy`` should
 be preferred for new developments.
+
+zope.app.security refactoring
+-----------------------------
+
+The ``zope.app.security`` package was finally refactored into a few small parts
+with less dependencies and more clear purpose.
+
+The implementation of the ``<module>`` ZCML directive moved from this
+package to ``zope.security``. Packages that relied on
+``zope.app.security`` to obtain this directive should declare a direct
+dependency on ``zope.security``, and it may be possible to lose the
+dependency on ``zope.app.security`` altogether.
+
+The ``protectclass`` module in this package has moved to
+``zope.security``, with backwards compatibility imports left in
+place. Review your imports from ``zope.app.security`` to see whether
+they cannot come directly from ``zope.security`` instead.
+
+All interfaces (`IAuthentication`, `IUnauthenticatedPrincipal`, `ILoginPassword`
+and so on.) were moved into a new ``zope.authentication`` package, as well as
+several utility things, like `PrincipalSource` and `checkPrincipal` function.
+The new package has much less dependencies and defines an abstract contracts for
+implementing authentication within Zope Framewowk. While backward compatibility
+imports are left in place, it's strongly reccommended to update your imports to
+the ``zope.authentication``.
+
+The `global principal registry` and its ZCML directives are moved into a new
+``zope.principalregistry`` package with backward-compatibility imports left in
+place. If your application uses global principals, review your code and ZCML
+configuration to update it to the new place.
+
+The `local permission` functionality was moved into a new ``zope.app.localpermission``
+package. This functionality is a part of Through-The-Web development pattern that
+seems not to be used and supported much by Zope Framework and Application anymore,
+so it can be considered deprecated. However, it can serve as a great example of
+TTW-related component.
+
+The `Permission vocabularies` and standard protections for Message objects and
+`__name__`, `__parent__` attributes as well as some common permissions, like `zope.View`
+and `zope.ManageContent` were merged into `zope.security`.
+
+The adapters from ``zope.publisher``'s `IHTTPCredentials` and `IFTPCredentials`
+to the `ILoginPassword` were moved into ``zope.publisher``, thus making
+``zope.authentication`` a dependency for ``zope.publisher``.
+
+The original ``zope.app.security`` package now only contains several deprecated
+or application-specific permission definitions, python module protections, that
+are only likely to be needed with deprecated Through-The-Web development pattern,
+and ZMI-related browser views (login.html, zope.app.form view for PrincipalSource
+and so on), as well as backward-compatibility imports. So, if you're not using
+TTW and/or standard ZMI browser views, you probably should review update your
+imports to a new places and drop dependency on ``zope.app.security`` to reduce
+package dependencies count.
+
+Other packages, that used ``zope.app.security``, like ``zope.securitypolicy`` are
+either already adapted to the changes or will be adapted soon.
+
 
 ZODB 3.9 FileStorage native blob support
 ----------------------------------------
