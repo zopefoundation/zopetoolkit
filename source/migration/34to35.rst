@@ -197,6 +197,21 @@ package dependencies count.
 Other packages, that used ``zope.app.security``, like ``zope.securitypolicy`` are
 either already adapted to the changes or will be adapted soon.
 
+Password managers extracted from zope.app.authentication
+--------------------------------------------------------
+
+The `IPasswordManager` interface and its implementations were extracted from
+``zope.app.authentication`` into a new ``zope.password`` package to make them
+usable with other authentication systems, like ``z3c.authenticator`` or
+``zope.principalregistry`` or any custom one.
+
+It basically depends only on ``zope.interface``, so it can be really useful even
+in non-Zope environments, like ``Pylons``, for example.
+
+The `Password Manager Names` vocabulary is also moved into ``zope.password``,
+however, it's only useful with ``zope.schema`` and ``zope.component``, so you
+need them installed to work with them. They're listed in the "vocabulary" extra
+requirement specification.
 
 ZODB 3.9 FileStorage native blob support
 ----------------------------------------
