@@ -28,13 +28,19 @@ The Steering Group is going to make decisions in the following way:
   having to flip any coins, as it's very silly to decide on the flip
   of a coin.
 
-* If no steering group member participates in a discussion and
-  consensus is reached, please proceed. Everything's fine. 
+* If you are doing a larger project of changing the code (as opposed
+  to minor changes or bugfixes), you should make a proposal on the
+  mailing list and get a steering group member to participate in the
+  discussion.
 
-* You only need to worry about the steering group if they're actually
-  participating in a discussion or if you don't like the consensus or
-  if no consensus is reached. 
+* If it's a small topic and no steering group member participates in a
+  discussion and consensus is reached, please proceed. Everything's
+  fine.
+
+* So, you only need to worry about the steering group for relatively
+  large issues, and when they're actually participating in a
+  discussion. You can also invoke the steering group if you don't like
+  the consensus reached in a discussion or if no consensus is reached.
 
 * Feel free to call in the Steering Group and it will fly in.  It's
   not a bird, it's not a plane, it's the Steering Group!
-
