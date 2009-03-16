@@ -1,6 +1,10 @@
 Decisions of the Zope Framework Steering Group
 ==============================================
 
+This is a temporary place to note decisions. The idea is to later
+integrate them into the Zope Framework documentation, but we need a
+quick way to note decisions first.
+
 * ZMI related code shall not be part of the Zope Framework, and we
   shall strive to remove it.
 
@@ -49,3 +53,8 @@ Decisions of the Zope Framework Steering Group
   Feel free to use that and also feel free to simplify existing
   ``__init__.py`` modules. Just make sure ``setuptools`` is a declared
   dependency of the package.
+
+* Moving code around as part of dependency refactoring is worth a
+  feature release (x.y as opposed to x.y.z version number) for the
+  affected packages. Changing an import to make use of a new package
+  that came out of such refactoring is also worth a feature release.
