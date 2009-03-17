@@ -58,3 +58,35 @@ quick way to note decisions first.
   feature release (x.y as opposed to x.y.z version number) for the
   affected packages. Changing an import to make use of a new package
   that came out of such refactoring is also worth a feature release.
+
+* In a ``setup.py`` you are allowed to write this in ``setup.py``::
+
+    bar >= x.y
+
+  I.e. relying on a newer feature release of package ``bar``.
+
+  but not this::
+
+    bar >= x.y.z
+
+  I.e. you're not allowed to rely on a newer *bugfix* release of
+  package ``bar``.
+
+  Elaboration: Imagine package ``foo`` that depends on package
+  ``bar``. If you make changes in ``foo`` so that it starts to rely on
+  changes in ``bar`` that are only introduced in a feature release of
+  ``bar`` (``bar`` version ``x.y`` or ``bar`` version ``x``), you
+  should update the ``setup.py`` of ``foo`` to state this dependency
+  with a requirement like this::
+
+    bar >= x.y
+
+  This is only relevant to *feature* releases. If there is a bugfix
+  release of ``bar`` you should not write a dependency like ``bar >=
+  x.y.z``.
+
+  This is a compromise in the interests of both flexibility and giving
+  hints to people who use our packages. We'll see how it goes.
+
+* If a package starts to rely on new features or behaviors as done
+  in a feature release of a dependency (i.e. x, or x.y)
