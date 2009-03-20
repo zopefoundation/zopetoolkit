@@ -14,6 +14,9 @@ steering group will want to make a decision soon.
   test runs and should be documented as an (optional) part of the framework
   development.
 
+* Support using ``setup.py test``? See
+  http://mail.zope.org/pipermail/zope-dev/2009-March/035240.html
+
 * We should investigate the possible role of WebOb in the Zope
   Framework. See http://mail.zope.org/pipermail/zope-dev/2009-March/034870.html
 
