@@ -59,7 +59,11 @@ quick way to note decisions first.
   affected packages. Changing an import to make use of a new package
   that came out of such refactoring is also worth a feature release.
 
-* In a ``setup.py`` you are allowed to write this in ``setup.py``::
+* The version requirements in setup.py should specify only API
+  compatibility.  They should not specify a dependency on bug fixes;
+  that's the domain of the KGS.
+
+  Therefore in a ``setup.py`` you are allowed to write this in ``setup.py``::
 
     bar >= x.y
 
