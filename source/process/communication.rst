@@ -1,7 +1,7 @@
 Communication
 =============
 
-Communication for the Zope Framework development itself happens both
+Communication for the Zope Toolkit development itself happens both
 on IRC and in a mailinglist.
 
 IRC
@@ -16,7 +16,7 @@ We use #zope3-dev on the IRC network provided by `freenode.net
 Mailing list
 ------------
 
-The official Zope Framework development mailing list is
+The official Zope Toolkit development mailing list is
 zope-dev@zope.org. You can subscribe to it by visiting
 http://mail.zope.org/mailman/listinfo/zope-dev.
 

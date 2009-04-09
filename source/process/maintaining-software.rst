@@ -390,7 +390,7 @@ or tag):
     * The list of `Trove classifiers`_ (``classifiers`` parameter)
       should be adjusted according to the specific package, of course.
       Much of the software in the Zope repository is intended to be
-      used with the Zope 2 or Zope Framework (sometimes for both), we
+      used with the Zope 2 or Zope Toolkit (sometimes for both), we
       aim to make more and more software available for independent use
       (well-known examples are ``zope.interface`` or the ``ZODB``).
 

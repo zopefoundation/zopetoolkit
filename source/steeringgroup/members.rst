@@ -1,5 +1,5 @@
-Membership of the Zope Framework Steering Group
-===============================================
+Membership of the Zope Toolkit Steering Group
+=============================================
 
 * Martijn Faassen
 

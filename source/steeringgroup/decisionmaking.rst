@@ -1,7 +1,7 @@
-How the Zope Framework Steering Group can help you
-==================================================
+How the Zope Toolkit Steering Group can help you
+================================================
 
-If you want to make some change to the Zope Framework, start a thread
+If you want to make some change to the Zope Toolkit, start a thread
 on zope-dev about it. The Steering Group is watching.
 
 The Steering Group is going to make decisions in the following way:

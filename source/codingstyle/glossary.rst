@@ -52,9 +52,10 @@ Manager
     service managers.
 
 Name
-    Objects are given names to help us find them. An object may be found
-    via more than one name. In the Zope Framework, we use names to guide the process
-    of traversing from a container to a contained object.
+    Objects are given names to help us find them. An object may be
+    found via more than one name. In the Zope Toolkit, we use names to
+    guide the process of traversing from a container to a contained
+    object.
 
 ZCML
     Zope Configuration Markup Language. An XML-based language used to

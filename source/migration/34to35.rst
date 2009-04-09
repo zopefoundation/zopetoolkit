@@ -1,28 +1,27 @@
-Migrating from Zope 3.4 to Zope Framework 3.5
-=============================================
+Migrating from Zope 3.4 to Zope Toolkit 3.5
+===========================================
 
 This document covers major changes from the Zope 3.4 release to the
-Zope Framework 3.5 release that can lead to
-backward-incompatibilities.
+Zope Toolkit 3.5 release that can lead to backward-incompatibilities.
 
 .. contents::
 
 Introduction
 ------------
 
-The Zope Framework 3.5 release is the first release of the Zope
-Framework. The Zope Framework really is just a collection of libraries
+The Zope Toolkit 3.5 release is the first release of the Zope
+Toolkit. The Zope Toolkit really is just a collection of libraries
 managed together by the Zope developers. We typically treat each
 library independently, so you would like to look at the CHANGES.txt in
 each library for updates. Here we note larger changes, especially ones
 that affect multiple libraries.
 
-The Zope Framework cannot be installed directly except as individual
+The Zope Toolkit cannot be installed directly except as individual
 libraries (such as ``zope.component``). To install it you typically
-would install a framework or application that makes use of these
+would install a toolkit or application that makes use of these
 libraries. The Zope project itself manages Zope 3, Zope 2, or Grok.
 
-The 3.5 release of the Zope Framework contains a number of
+The 3.5 release of the Zope Toolkit contains a number of
 refactorings that are aimed to clean up dependencies between pieces of
 code. Many packages in ``zope.app`` have had their code moved to
 existing or newly created packages in the ``zope`` namespace. These
@@ -173,7 +172,7 @@ configuration to update it to the new place.
 
 The `local permission` functionality was moved into a new ``zope.app.localpermission``
 package. This functionality is a part of Through-The-Web development pattern that
-seems not to be used and supported much by Zope Framework and Application anymore,
+seems not to be used and supported much by Zope Toolkit and Application anymore,
 so it can be considered deprecated. However, it can serve as a great example of
 TTW-related component.
 
@@ -216,7 +215,7 @@ requirement specification.
 ZODB 3.9 FileStorage native blob support
 ----------------------------------------
 
-The FileStorage component of ZODB 3.9 used in Zope Framework 3.5 now
+The FileStorage component of ZODB 3.9 used in Zope Toolkit 3.5 now
 supports blobs natively, so you don't need to use BlobStorage proxy
 for it anymore.
 

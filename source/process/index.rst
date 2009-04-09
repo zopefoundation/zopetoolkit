@@ -2,7 +2,7 @@ Development process
 ===================
 
 This area covers the procedures and guidelines we adhere to when
-developing Zope Framework components.
+developing Zope Toolkit components.
 
 .. note::
     This area currently is heavy work-in-progress. We are pulling in

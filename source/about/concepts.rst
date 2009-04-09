@@ -18,25 +18,25 @@ refer to things in discussions.
   Zope concepts and expand on Zope technology.
 
 * Plone: a CMS based on Zope 2 and the CMF that is a major consumer of
-  Zope Framework technology.
+  Zope Toolkit technology.
 
-* Zope Framework: the collection of Zope Framework core
+* Zope Toolkit: the collection of Zope Toolkit core
   libraries. Shouldn't include the ZMI and doesn't include a
   particular way to create a project.
 
-* Zope Framework release: a set of Zope Framework library versions
+* Zope Toolkit release: a set of Zope Toolkit library versions
   that have been tested to work together. This set receives a
-  collective version number ("Zope Framework 3.5"). A release could
+  collective version number ("Zope Toolkit 3.5"). A release could
   simply consist of a list of version numbers.
 
-* Zope Framework Steering Group: the group responsible for the leading
-  Zope Framework development, ensuring its continued evolution driven
-  by the concerns of the various consumers of the framework (or
-  particular libraries in the framework).
+* Zope Toolkit Steering Group: the group responsible for the leading
+  Zope Toolkit development, ensuring its continued evolution driven
+  by the concerns of the various consumers of the toolkit (or
+  particular libraries in the toolkit).
 
-* Zope core library: a library within the Zope Framework.
+* Zope core library: a library within the Zope Toolkit.
 
-* Zope extra library: a library not within the Zope Framework. Could
-  be "just not" within the Zope Framework, or "not yet", or "not
+* Zope extra library: a library not within the Zope Toolkit. Could
+  be "just not" within the Zope Toolkit, or "not yet", or "not
   anymore". These libraries are intended to work with the Zope
-  Framework and are maintained by the wider Zope community.
+  Toolkit and are maintained by the wider Zope community.

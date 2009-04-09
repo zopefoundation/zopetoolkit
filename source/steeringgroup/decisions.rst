@@ -1,11 +1,11 @@
-Decisions of the Zope Framework Steering Group
-==============================================
+Decisions of the Zope Toolkit Steering Group
+============================================
 
 This is a temporary place to note decisions. The idea is to later
-integrate them into the Zope Framework documentation, but we need a
+integrate them into the Zope Toolkit documentation, but we need a
 quick way to note decisions first.
 
-* ZMI related code shall not be part of the Zope Framework, and we
+* ZMI related code shall not be part of the Zope Toolkit, and we
   shall strive to remove it.
 
 * If zope.deferredimport is used in a package merely to avoid the use
@@ -25,14 +25,14 @@ quick way to note decisions first.
   packages. Hopefully we can get a clear consensus on this one from
   the people who object to the general policy.
 
-* if you think a new "extra" dependency is needed in a Zope Framework
+* if you think a new "extra" dependency is needed in a Zope Toolkit
   package, and you're not just moving stuff between packages but
   actually developing new code, bring it up on zope-dev so we can at
   least consider alternatives. Perhaps a better home can be found for
   this code.
 
 * We can consider removing extra dependencies for particular Zope
-  Framework packages in order to make the dependency graph easier to
+  Toolkit packages in order to make the dependency graph easier to
   reason about. We will do this on a case by case basis though.
   
 * In namespace package's ``__init__.py`` we have been using the following

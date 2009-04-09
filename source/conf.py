@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Zope Framework Documentation documentation build configuration file, created by
+# Zope Toolkit Documentation documentation build configuration file, created by
 # sphinx-quickstart on Mon Feb  2 16:17:40 2009.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -41,7 +41,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Zope Framework'
+project = u'Zope Toolkit'
 copyright = u'2009, Zope Foundation'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -153,7 +153,7 @@ html_static_path = ['_static']
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ZopeFrameworkdoc'
+htmlhelp_basename = 'ZopeToolkitdoc'
 
 
 # Options for LaTeX output
@@ -168,8 +168,8 @@ htmlhelp_basename = 'ZopeFrameworkdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'ZopeFrameworkDocumentation.tex',
-   ur'Zope Framework Documentation',
+  ('index', 'ZopeToolkitDocumentation.tex',
+   ur'Zope Toolkit Documentation',
    ur'Zope Developers', 'manual'),
 ]
 
