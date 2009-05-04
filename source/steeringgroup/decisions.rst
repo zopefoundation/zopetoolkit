@@ -59,6 +59,9 @@ quick way to note decisions first.
   affected packages. Changing an import to make use of a new package
   that came out of such refactoring is also worth a feature release.
 
+* If a package A starts to rely on new features in dependency B,
+  that is worth a feature release of package A.
+
 * The version requirements in setup.py should specify only API
   compatibility.  They should not specify a dependency on bug fixes;
   that's the domain of the KGS.
@@ -92,5 +95,3 @@ quick way to note decisions first.
   This is a compromise in the interests of both flexibility and giving
   hints to people who use our packages. We'll see how it goes.
 
-* If a package starts to rely on new features or behaviors as done
-  in a feature release of a dependency (i.e. x, or x.y)
