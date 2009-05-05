@@ -26,6 +26,22 @@ steering group will want to make a decision soon.
 * We should investigate the possible role of WebOb in the Zope
   Toolkit. See http://mail.zope.org/pipermail/zope-dev/2009-March/034870.html
 
+* When can we give up Python 2.4 compatibility for new releases of
+  packages? The following decision didn't please everybody:
+
+  * New feature releases of packages in the Zope Toolkit should be
+    compatible with Python 2.5 (and 2.6, preferably). Python 2.4
+    compatibility is not required.
+ 
+    The following low-level packages are exceptions that do still need
+    Python 2.4 compatibility:
+
+    * zope.interface, zope.schema, zope.component, zope.event,
+      zope.i18nmessageid
+
+
+
+
 .. note:: 
    We may want to move over the management of such issues to
    launchpad? Not?
