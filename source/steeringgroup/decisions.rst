@@ -94,3 +94,40 @@ quick way to note decisions first.
 
   This is a compromise in the interests of both flexibility and giving
   hints to people who use our packages. We'll see how it goes.
+
+* Some Zope Toolkit packages are quite reusable without having to buy
+  into the rest of the Zope Toolkit. Others aren't reusable at all
+  without pulling in a huge chunk of the Zope Toolkit; they depend on
+  many assumptions.
+
+  We should communicate this clearly to potential users. As a first
+  step, we will make sure these notifications are available on the
+  PyPI pages. We will do this by adding a message about reusability to
+  the long_description (which gets displayed on PyPI). Typically this
+  is done by modifying the package's README.txt or
+  ``src/zope/../README.txt`` doctest.
+
+  The following text should be used for reusable packages::
+
+    *This package is intended to be independently reusable in any Python
+    project. It is maintained by the* `Zope Toolkit project
+    <http://docs.zope.org/zopetoolkit/>`_.
+
+  The following text should be used for packages that are *not*
+  easily reusable::
+
+    *This package is at present not reusable without depending on a
+    large chunk of the Zope Toolkit and its assumptions. It is
+    maintained by the* `Zope Toolkit project
+    <http://docs.zope.org/zopetoolkit/>`_.
+
+  At the time of writing, most of our packages will be marked as *not*
+  reusable. Only packages at the roots of our dependency tree that
+  have a clear purpose and some documentation (such as
+  ``zope.interface`` and ``zope.component``) should be marked as
+  reusable. We will slowly start to build up from there.
+
+
+
+
+
