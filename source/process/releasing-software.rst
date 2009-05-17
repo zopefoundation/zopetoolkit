@@ -5,13 +5,14 @@ When releasing software, the following steps should be taken:
 
 1. Make sure all automated tests of the package pass.
 
-.. note::
-    TODO According to the documentation of TODO comments, we shouldn't
-    release software that has XXX comments in them.  That means we
-    should at least check for them before releasing.
-
 2. Fill in the release date in ``CHANGES.txt``.  Make sure the
    changelog is complete.
+
+   Also consider the version number for the new release. If the API
+   has been added to, or the behavior has otherwise changed in a way
+   that goes beyond a bugfix, please update the version number for the
+   next release and make it a feature release (x.y) instead of a
+   bugfix release (x.y.z).
 
 3. Make sure the package metadata in ``setup.py`` is up-to-date.  You
    can verify the information by re-generating the egg info::
