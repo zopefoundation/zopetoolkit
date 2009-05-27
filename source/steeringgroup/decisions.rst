@@ -127,7 +127,27 @@ quick way to note decisions first.
   ``zope.interface`` and ``zope.component``) should be marked as
   reusable. We will slowly start to build up from there.
 
+* When code moves to a new location to import it from (in the same or
+  another package), use a ``from foo import bar`` statement, with a
+  ``#BBB`` comment to indicate the import is only there to support
+  backwards compatibility.
 
+  In the CHANGES.txt of a package, state that an import location got
+  deprecated and where the new location is (making this a feature
+  release, not a bugfix release).
 
+  Reasons:
 
+  * it avoid a dependency on zope.deprecation, which is quite involved
+    in its implementation, using proxies.
 
+  * A ``from .. import ..`` is immediately comprehensible to any
+    Python programmer as well as tools.
+  
+  * Deprecation warnings make it hard to write a library that supports
+    multiple versions of another library; a change in an indirect
+    dependency can create deprecation warnings that the original
+    developer does not care about.
+
+  * We are in the process of developing a testrunner extension that
+    will report on indirect imports, and a ZODB upgrade procedure.
