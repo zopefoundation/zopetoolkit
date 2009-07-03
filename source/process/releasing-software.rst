@@ -3,7 +3,9 @@ Releasing software
 
 When releasing software, the following steps should be taken:
 
-1. Make sure all automated tests of the package pass.
+1. Make sure all automated tests of the package pass. If the package
+   is tracking bugs on launchpad, make sure there are no release
+   critical bugs for that release.
 
 2. Fill in the release date in ``CHANGES.txt``.  Make sure the
    changelog is complete.
