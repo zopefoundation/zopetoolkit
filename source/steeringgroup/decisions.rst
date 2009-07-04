@@ -151,3 +151,8 @@ quick way to note decisions first.
 
   * We are in the process of developing a testrunner extension that
     will report on indirect imports, and a ZODB upgrade procedure.
+
+* The open issues will be moved to the launchpad blueprints and
+  launchpad answers. The blueprint specifications will be stored in
+  the ZTK documentation and linked to (each blueprint will be a
+  separate document).

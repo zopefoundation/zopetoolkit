@@ -39,10 +39,22 @@ steering group will want to make a decision soon.
     * zope.interface, zope.schema, zope.component, zope.event,
       zope.i18nmessageid
 
+* publisher and traversal simplification: Shane Hathaway's WSGI
+  pipeline work, Jim's new bobo should be points to explore.
 
+* reusable components that include a UI. Might be separated into two
+  components (API and UI), or even three (API, web service and
+  UI). Example use cases are user management and tagging. Explore
+  Pinax for more examples. The irony and great potential of the ZTK
+  right now is that we *have* a component story that works pretty well
+  so we *should* be able to do great flexible UI components, but we
+  don't have a good story for this at all.
 
+* dependency refactoring: this is an ongoing process to try to flatten
+  the dependency structure between packages and allow greater reusability
+  of our code, and reduce the amount of code that is needed in a minimal
+  setup (less to understand, and less startup time).
 
-.. note:: 
-   We may want to move over the management of such issues to
-   launchpad? Not?
+* startup time: reduce the startup time of ZTK applications so that 
+  the paster auto-restart becomes more tolerable. 
 
