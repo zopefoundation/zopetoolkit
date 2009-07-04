@@ -1,9 +1,6 @@
 Core and Extra concepts
 =======================
 
-Introduction
-------------
-
 The Zope Toolkit covers only some libraries in the wider Zope
 community and software repository. We introduce the concepts of *core*
 and *extra* to be able to distinguish between the two.

@@ -1,0 +1,7 @@
+@import url("default.css");
+
+div.body p,
+div.body dd,
+div.body li {
+    text-align:left;
+}
