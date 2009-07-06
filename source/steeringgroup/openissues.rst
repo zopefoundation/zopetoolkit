@@ -61,3 +61,7 @@ steering group will want to make a decision soon.
 * We need a process to implement new functionality/features within the ZTK.
   There seems to be some tendency to implement new functionality in each
   framework/project without a backchannel to share results on a common basis.
+
+* Provide a dash-board for getting an overview about all libraries of the ZTK
+  with information about: bugs (open, new, ...), test status, XXX comment
+  status, dependency graphs.
