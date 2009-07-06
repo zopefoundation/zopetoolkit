@@ -58,3 +58,6 @@ steering group will want to make a decision soon.
 * startup time: reduce the startup time of ZTK applications so that 
   the paster auto-restart becomes more tolerable. 
 
+* We need a process to implement new functionality/features within the ZTK.
+  There seems to be some tendency to implement new functionality in each
+  framework/project without a backchannel to share results on a common basis.
