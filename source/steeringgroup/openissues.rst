@@ -65,3 +65,26 @@ steering group will want to make a decision soon.
 * Provide a dash-board for getting an overview about all libraries of the ZTK
   with information about: bugs (open, new, ...), test status, XXX comment
   status, dependency graphs.
+
+* Write document on optional integration, see ML article by Jim Fulton,
+  "Optional integration need not introduce dependences"
+
+* Write document on rules concerning extra requires and test_require for
+  tests. Quoting Jim:
+
+    I'd like us to say something along the lines of:
+ 
+   "If your tests have additional dependencies, define "test" extra
+   with these dependencies.  Also define tests_require and test_suite
+   so that your package supports the test command."
+
+   (Not verbatim and we should give examples.)
+
+   Note I used to object to tests_require because the information
+   wasn't available after installation.  I still do, but I've started
+   using it anyway.  Tres wrote a plugin to fix this (thanks Tres),
+   but I think it's easier just to define tests_require (and test
+   suite) along with tests_require.
+
+   Letting people run tests via the setup command is a lot better than
+   trying to tell them how to use a buildout.
