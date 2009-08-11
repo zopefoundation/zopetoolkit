@@ -7,3 +7,5 @@ Membership of the Zope Toolkit Steering Group
 
 * Christian Theune
 
+* Jim Fulton
+
