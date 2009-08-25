@@ -156,3 +156,8 @@ quick way to note decisions first.
   launchpad answers. The blueprint specifications will be stored in
   the ZTK documentation and linked to (each blueprint will be a
   separate document).
+
+* As a general direction we'd like to separate out the XML-RPC related
+  code and FTP-related code into seperate packages that aren't
+  depended on by the rest of the toolkit. This makes it possible for
+  developers to use the toolkit without worrying about XML-RPC or FTP.
