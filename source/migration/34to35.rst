@@ -1,15 +1,18 @@
-Migrating from Zope 3.4 to Zope Toolkit 3.5
+Migrating from Zope 3.4 to Zope Toolkit 1.0
 ===========================================
 
+Note: this document is out of date. The idea is now to consult the
+CHANGES.txt of the individual releases.
+
 This document covers major changes from the Zope 3.4 release to the
-Zope Toolkit 3.5 release that can lead to backward-incompatibilities.
+Zope Toolkit 1.0 release that can lead to backward-incompatibilities.
 
 .. contents::
 
 Introduction
 ------------
 
-The Zope Toolkit 3.5 release is the first release of the Zope
+The Zope Toolkit 1.0 release is the first release of the Zope
 Toolkit. The Zope Toolkit really is just a collection of libraries
 managed together by the Zope developers. We typically treat each
 library independently, so you would like to look at the CHANGES.txt in
@@ -21,7 +24,7 @@ libraries (such as ``zope.component``). To install it you typically
 would install a toolkit or application that makes use of these
 libraries. The Zope project itself manages Zope 3, Zope 2, or Grok.
 
-The 3.5 release of the Zope Toolkit contains a number of
+The 1.0 release of the Zope Toolkit contains a number of
 refactorings that are aimed to clean up dependencies between pieces of
 code. Many packages in ``zope.app`` have had their code moved to
 existing or newly created packages in the ``zope`` namespace. These
@@ -215,7 +218,7 @@ requirement specification.
 ZODB 3.9 FileStorage native blob support
 ----------------------------------------
 
-The FileStorage component of ZODB 3.9 used in Zope Toolkit 3.5 now
+The FileStorage component of ZODB 3.9 used in Zope Toolkit 1.0 now
 supports blobs natively, so you don't need to use BlobStorage proxy
 for it anymore.
 
