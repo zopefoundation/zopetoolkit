@@ -161,3 +161,19 @@ quick way to note decisions first.
   code and FTP-related code into seperate packages that aren't
   depended on by the rest of the toolkit. This makes it possible for
   developers to use the toolkit without worrying about XML-RPC or FTP.
+
+* In the interests to make it easy for developers to identify which
+  packages are in the ZTK, as they are sometimes working in isolation,
+  a package that is maintained by the Zope Toolkit project should have
+  the following text in its ``setup.py`` file just under the copyright
+  header::
+
+    ##############################################################################
+    # This package is developed by the Zope Toolkit project, documented here:
+    # http://docs.zope.org/zopetoolkit
+    # When developing and releasing this package, please follow the documented
+    # Zope Toolkit policies as described by this documentation.
+    ##############################################################################
+
+  When a package is *removed* from the ZTK this header should be removed
+  from its ``setup.py`` as well.
