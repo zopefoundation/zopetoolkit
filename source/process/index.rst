@@ -14,6 +14,7 @@ developing Zope Toolkit components.
     :maxdepth: 1
 
     releasing-software
+    python-versions
     maintaining-software
     repository
     bug-tracking
