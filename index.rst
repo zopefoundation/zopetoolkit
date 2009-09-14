@@ -196,6 +196,50 @@ package dependencies count.
 Other packages, that used ``zope.app.security``, like ``zope.securitypolicy`` are
 either already adapted to the changes or will be adapted soon.
 
+zope.app.publisher refactoring
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``zope.app.publisher`` package was also refactored into smaller parts
+with less dependencies and clearer purpose.
+
+The browser resources mechanism (mostly used for serving static files and
+directories) was factored out to the new ``zope.browserresource`` package.
+It was also made more pluggable, so you can register specific resource classes
+for some file extensions, if you need special processing. One of the example
+is the new ``zope.ptresource`` package, where the PageTemplateResource was
+moved, another example is ``z3c.zrtresource`` package that was adapted to
+automatically use ZRT resource class for files with ``.zrt`` extensions.
+
+Browser menu mechanism was moved into a new ``zope.browsermenu`` package with
+no further changes.
+
+ZCML directives for easy creation of browser views (the ``browser:page``
+directive and friends) was moved into a new small package, ``zope.browserpage``.
+Also, the directives don't depend the menu mechanism now and will simply ignore
+"menu" and "title" arguments if ``zope.browsermenu`` package is not installed.
+
+The ``IModifiableBrowserLanguages`` adapter was moved into ``zope.publisher``
+along with several ZCML security declarations for ``zope.publisher`` classes
+that used to be in ``zope.app.publisher``.
+
+ZCML registrations for ``IXMLRPCPublisher`` adapter for containers was moved
+into the ``zope.container``, because the actual adapters code were already in
+``zope.container`` and registered there as ``IBrowserPublisher`` adapters.
+However, both adapters and their ZCML registrations will probably move elsewhere
+when we'll be refactoring ``zope.container``.
+
+Several parts are left in ``zope.app.publisher`` untouched:
+
+ * ``Browser Skins`` vocabulary.
+ * ``date`` field converter for ``zope.publisher``'s form values conversion
+   mechanism.
+ * ``ManagementViewSelector`` browser view (ZMI-related part).
+ * ``xmlrpc:view`` directive for publishing XML-RPC methods.
+
+The latter, ``xmlrpc:view`` directive is generally useful, so it may be moved
+into a separate package in future, however there are no clear decision about
+how to move XML-RPC and FTP-related things currently.
+
 Password managers extracted from zope.app.authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
