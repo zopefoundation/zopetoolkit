@@ -1,15 +1,18 @@
 Tools
 =====
 
+
+Buildbots
+~~~~~~~~~
+
 http://zope3.pov.lt/buildbot/
-    a buildbot run by POV that monitors the KGS for Zope 3.4
+    Tests the KGS for Zope 3.4 (run by POV)
 
 http://zope3.afpy.org/buildbot/
-    a buildbot for Zope 1.0 KGS, which is the development version at the moment
+    Tests the Zope 3.4 and Zope 3.5 (run by AFPY)
 
 http://zope.buildbot.securactive.org/
-    a buildbot run by SecurActive SA that monitors the trunk of zope.release
+    Tests the trunk of `zope.release` (run by SecurActive SA)
 
-http://buildbot.zope.org/
-    used to run a buildbot for various Zope projects but has been
-    retired.
+http://dev.thehealthagency.com/buildbot/
+    Tests the trunks of ZTK, grok and zc.buildout (run by TheHealthAgency)
