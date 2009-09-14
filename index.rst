@@ -132,7 +132,7 @@ register ``zope.location.pickling.LocationCopyHook`` yourself.
 
 The ``zope.location.pickling.locationCopy`` and
 ``zope.location.pickling.CopyPersistent`` are now deprecated in favor
-of ``zope.copy`` and were replaced by deprecated imports. See
+of ``zope.copy`` and were replaced by backward-compatibility imports. See
 ``zope.copy`` package documentation for information on how to use the
 new mechanism.
 
