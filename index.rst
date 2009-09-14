@@ -2,17 +2,6 @@
    It is intended for automatic inclusion by the ZTK sphinx-based
    documentation.
 
-Zope Toolkit 1.0
-================
-
-.. XXX
-Note: this document is out of date. The idea is now to consult the
-CHANGES.txt of the individual releases.
-
-This document covers major changes from the Zope 3.4 release to the
-Zope Toolkit 1.0 release that can lead to backward-incompatibilities.
-
-.. contents::
 
 Introduction
 ------------
