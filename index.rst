@@ -16,7 +16,7 @@ that affect multiple libraries.
 The Zope Toolkit cannot be installed directly except as individual
 libraries (such as ``zope.component``). To install it you typically
 would install a toolkit or application that makes use of these
-libraries. The Zope project itself manages Zope 3, Zope 2, or Grok.
+libraries. The Zope project itself manages Zope 3 and Grok.
 
 The 1.0 release of the Zope Toolkit contains a number of
 refactorings that are aimed to clean up dependencies between pieces of
