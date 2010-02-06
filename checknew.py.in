@@ -10,7 +10,7 @@ def main():
     print 'Setting socket time out to %d seconds' % 3
     socket.setdefaulttimeout(3)
 
-    eggs = """${eggs}"""
+    eggs = """${interpreter:eggs}"""
     ws = pkg_resources.require(eggs.split())
     pi = PackageIndex()
 
