@@ -3,7 +3,7 @@ The Zope Toolkit
 ================
 
 The Zope Toolkit is a set of libraries maintained by the Zope project for
-building web frameworks and application servers.
+building web applications, web frameworks and application servers.
 
 This directory contains the definition of the Zope Toolkit in the file
 `ztk.cfg`. It specifies the list of packages included in the ZTK and packages
