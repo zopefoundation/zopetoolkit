@@ -16,7 +16,7 @@ that affect multiple libraries.
 The Zope Toolkit cannot be installed directly except as individual
 libraries (such as ``zope.component``). To install it you typically
 would install a toolkit or application that makes use of these
-libraries. The Zope project itself manages Zope 3 and Grok.
+libraries. Examples of such projects are BlueBream, Grok and Zope 2.
 
 The 1.0 release of the Zope Toolkit contains a number of
 refactorings that are aimed to clean up dependencies between pieces of
@@ -34,10 +34,7 @@ indirect dependencies; if you see an import error this is probably the
 case.
 
 We recommend you update your existing code to import from the new
-packages if possible. We list major changes below. We are also working
-on an extension to the Zope testrunner that can indicate indirect
-imports, as well as a tool to upgrade existing ZODBs to make use of
-new import locations.
+packages if possible. We list major changes below.
 
 Migration issues
 ----------------
@@ -47,7 +44,7 @@ zope.app.keyreference -> zope.keyreference
 
 This package was renamed to ``zope.keyreference`` and all its
 functionality was moved to the new one. The new package contains a
-little workaround for making old persistent keyrerefences loadable
+little workaround for making old persistent keyreferences loadable
 without ``zope.app.keyreference`` installed, so the latter one is not
 needed at all anymore. Still review your code for any imports coming
 from ``zope.app.keyreference`` and modify it to use
@@ -160,10 +157,10 @@ they cannot come directly from ``zope.security`` instead.
 All interfaces (`IAuthentication`, `IUnauthenticatedPrincipal`, `ILoginPassword`
 and so on.) were moved into a new ``zope.authentication`` package, as well as
 several utility things, like `PrincipalSource` and `checkPrincipal` function.
-The new package has much less dependencies and defines an abstract contracts for
-implementing authentication within Zope Framewowk. While backward compatibility
-imports are left in place, it's strongly reccommended to update your imports to
-the ``zope.authentication``.
+The new package has much less dependencies and defines an abstract contract for
+implementing authentication policies. While backward compatibility imports are
+left in place, it's strongly recommended to update your imports to the
+``zope.authentication``.
 
 The `global principal registry` and its ZCML directives are moved into a new
 ``zope.principalregistry`` package with backward-compatibility imports left in
