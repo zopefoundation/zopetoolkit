@@ -33,8 +33,11 @@ the cleanup they might not come in automatically anymore due to
 indirect dependencies; if you see an import error this is probably the
 case.
 
-We recommend you update your existing code to import from the new
-packages if possible. We list major changes below.
+We recommend you update your existing code to import from the new packages if
+possible. The transition support and ``zope.app.*`` support is limited: the
+legacy support will be officially retired from the ZTK after January 1,
+2011.
+
 
 Migration issues
 ----------------
