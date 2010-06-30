@@ -21,15 +21,14 @@ libraries (such as ``zope.component``). To install it you typically
 would install a framework or application that makes use of these
 libraries. Examples of such projects are BlueBream, Grok and Zope 2.
 
-If you want to use the Zope Toolkit KGS, you can either use the buildout
+If you want to use the Zope Toolkit KGS, you can use the buildout
 extends mechanism (replace 1.0a1 by the desired version)::
 
   [buildout]
   extends = http://download.zope.org/zopetoolkit/index/1.0a1/ztk-versions.cfg
 
-or you can install one of the libraries of the Toolkit directly::
-
-  easy_install -i http://download.zope.org/zopetoolkit/index/1.0a1 zope.component
+You can also copy the file locally or additionally extend the
+zopeapp-versions.cfg file from the same location.
 
 Frameworks and applications have their own set of install instructions. You
 should follow these in most cases.
