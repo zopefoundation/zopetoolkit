@@ -309,3 +309,12 @@ instead of:
 .. code-block:: python
 
   storage = BlobStorage('var/blobs', FileStorage('var/Data.fs'))
+
+
+zope.dublincore permission renaming
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``zope.app.dublincore.*`` permissions have been renamed to
+``zope.dublincore.*``. Applications using these permissions have to fix up
+grants based on the old permissions.
+
