@@ -32,14 +32,3 @@ zopeapp-versions.cfg file from the same location.
 
 Frameworks and applications have their own set of install instructions. You
 should follow these in most cases.
-
-News
-----
-
-TODO
-
-
-Migration issues
-----------------
-
-TODO
