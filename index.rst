@@ -22,13 +22,51 @@ would install a framework or application that makes use of these
 libraries. Examples of such projects are BlueBream, Grok and Zope 2.
 
 If you want to use the Zope Toolkit KGS, you can use the buildout
-extends mechanism (replace 1.1a1 by the desired version)::
+extends mechanism (replace 1.1 by the desired version)::
 
   [buildout]
-  extends = http://download.zope.org/zopetoolkit/index/1.1a1/ztk-versions.cfg
+  extends = http://download.zope.org/zopetoolkit/index/1.1/ztk-versions.cfg
 
 You can also copy the file locally or additionally extend the
 zopeapp-versions.cfg file from the same location.
 
 Frameworks and applications have their own set of install instructions. You
 should follow these in most cases.
+
+Python versions
+---------------
+
+The ZTK 1.1 release series supports Python 2.5 up to Python 2.7. Some libraries
+included in the ZTK support Python 3.1 or later. But as a whole the ZTK
+supports no Python 3.x version yet.
+
+News
+----
+
+Python versions
+~~~~~~~~~~~~~~~
+
+Python 2.4 is no longer supported by this version of the ZTK. Support for
+Python 2.7 has been added.
+
+ZODB 3.10
+~~~~~~~~~
+
+This ZTK version includes ZODB 3.10 instead of 3.9 as included in the 1.0
+series. You can read more about the changes at
+http://pypi.python.org/pypi/ZODB3/3.10.0#change-history.
+
+zc.buildout 1.5
+~~~~~~~~~~~~~~~
+
+The buildout version has been updated to 1.5 from the former 1.4 series. This
+release requires some changes to recipes, so make sure to update all recipes to
+compatible versions or check their availability first. More detailed changes
+can be found at http://pypi.python.org/pypi/zc.buildout/1.5.2#change-history.
+
+zope.testing 3.10
+~~~~~~~~~~~~~~~~~
+
+In zope.testing 3.10 the `zope.testing.testrunner` package has been moved to
+a standalone distribution called `zope.testrunner`. You need to adjust your
+imports or use compatible versions of test runner recipes.
