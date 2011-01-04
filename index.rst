@@ -33,6 +33,12 @@ zopeapp-versions.cfg file from the same location.
 Frameworks and applications have their own set of install instructions. You
 should follow these in most cases.
 
+Python versions
+---------------
+
+The ZTK 1.0 release series supports Python 2.4 up to Python 2.6. Neither
+Python 2.7 nor any Python 3.x series is supported.
+
 News
 ----
 
@@ -53,8 +59,7 @@ case.
 
 We recommend you update your existing code to import from the new packages if
 possible. The transition support and ``zope.app.*`` support is limited: the
-legacy support will be officially retired from the ZTK after January 1,
-2011.
+legacy support will be officially retired from the ZTK in subsequent releases.
 
 
 Migration issues
