@@ -30,4 +30,4 @@ via the buildout extends mechanism.
 
 To test the Zope App set, run ``bin/test-zopeapp``.
 
-For more details read the ZTK 1.0 release notes.
+For more details read the ZTK 1.1 release notes.

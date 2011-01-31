@@ -36,9 +36,13 @@ should follow these in most cases.
 Python versions
 ---------------
 
-The ZTK 1.1 release series supports Python 2.5 up to Python 2.7. Some libraries
-included in the ZTK support Python 3.1 or later. But as a whole the ZTK
-supports no Python 3.x version yet.
+The ZTK 1.1 release series aim to support Python 2.5 up to Python 2.7. However,
+there is an issue with the `zope.proxy` package using Python 2.7 on 64-bit
+machines. This issue should be resolved with the upcoming release of Python
+2.7.2. See also http://bugs.python.org/issue10360.
+
+Some libraries included in the ZTK support Python 3.1 or later. But as a whole
+the ZTK supports no Python 3.x version yet.
 
 News
 ----
