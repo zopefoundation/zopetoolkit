@@ -19,15 +19,3 @@ To generate dependency graphs for the ZTK, run ``bin/depgraph``. The
 resulting SVN graphs will be in ``parts/depgraph``.
 
 For details about the ZTK, please see http://docs.zope.org/zopetoolkit.
-
-Transition support
-------------------
-
-For a limited period of time, we maintain a second set of versions in the
-``zopeapp.cfg`` set. This transition support should help existing applications
-to move to the Zope Toolkit. You can extend from the ``zopeapp-versions.cfg``
-via the buildout extends mechanism.
-
-To test the Zope App set, run ``bin/test-zopeapp``.
-
-For more details read the ZTK 1.0 release notes.
