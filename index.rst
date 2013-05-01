@@ -64,4 +64,11 @@ zc.buildout 2
 The buildout version has been updated to 2 from the former 1.x series. This
 release requires some changes to recipes, so make sure to update all recipes to
 compatible versions or check their availability first. More detailed changes
-can be found at https://pypi.python.org/pypi/zc.buildout/2.0.1#change-history.
+can be found at https://pypi.python.org/pypi/zc.buildout/2.1.0#change-history
+
+Deprecated zope.app
+~~~~~~~~~~~~~~~~~~~
+
+This version of the ZTK no longer provides compatibility guarantees for any
+zope.app.* libraries. Maintenance of these libraries is outside of the scope
+of the ZTK and is taken up by individuals and framework developers.
