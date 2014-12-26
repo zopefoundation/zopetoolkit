@@ -2,6 +2,9 @@
 The Zope Toolkit
 ================
 
+.. image:: https://travis-ci.org/zopefoundation/zopetoolkit.png?branch=master
+        :target: https://travis-ci.org/zopefoundation/zopetoolkit
+
 The Zope Toolkit is a set of libraries maintained by the Zope project for
 building web applications, web frameworks and application servers.
 
