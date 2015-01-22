@@ -6,7 +6,7 @@ __pycache__
 bin
 eggs
 develop-eggs
-docs
+docs/_build
 parts
 build
 .mr.developer.cfg
