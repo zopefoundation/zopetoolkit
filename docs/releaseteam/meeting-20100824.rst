@@ -1,0 +1,57 @@
+ZTK meeting - 2010-08-24
+========================
+
+Attendance
+----------
+
+j-w, hannosch, ccomb.
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes of the last meeting were principally agreed on.
+
+Tasks
+
+- hannosch updated the *.cfg's deprecating zope.app.* packages that are not used
+  by the consuming frameworks.
+
+- j-w got access to download.zope.org for making ZTK releases. He will do the
+  next alpha release just after this meeting.
+
+- There're still Windows-related test failures for the ZTK. Work still needs to
+  be done to identify and fix these issues.
+
+- ccomb brought up the issue of sharing a list of packages between BB and
+  Grok that will not be part of the ZTK. The suggestion is to start
+  collaborating on such a list between the respective communities.
+
+Tasks
+-----
+
+- Make the 1.0a3 release. [j-w]
+
+- Windows test failures [j-w]
+
+- Add a remark about the discover-ztk buildbot to the release-procedures.rst
+  file [ccomb].
+
+Open points
+-----------
+
+- Will Windows test failures for the ZTK block a beta?
+
+Next meeting
+------------
+
+Next meeting is scheduled for September 7th 16:00 (CEST) on #zope.

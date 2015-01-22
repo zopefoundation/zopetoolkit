@@ -1,0 +1,126 @@
+==========
+2010-08-31
+==========
+
+This is the agenda and summary for the weekly Zope developer meeting of
+Tuesday, 2010-08-31 on #zope@irc.freenode.org from 15:00 to 15:30 UTC.
+
+Summary
+=======
+
+The IRC log is available here:
+    http://zope3.pov.lt/irclogs-zope/%23zope.2010-08-31.log.html#t2010-08-31T18:00:25
+
+Attendees
+---------
+
+Charlie Clark, Adam Groszer, Patrick Gerken
+
+
+
+Agenda
+======
+
+- Supporting Python 2.7
+
+  - Needs help from the buildbots
+
+    Patrick reported that ZODB + Windows is still struggling with
+    Python 2.7. Windows support remains problem for Zope with apparently
+    few core developers using it.
+  
+    It was agreed that full support for Python 2.7 is still some way
+    away, probably ZTK 1.1 but this is a matter for the ZTK team.
+
+- Abandoned projects (Tres)
+  
+  Charlie suggested that to avoid overly subjective project dropping,
+  criteria for being included need defining "I don't use XYZ so I don't
+  care about it". Such criteria might be the quality and scope of test
+  coverage and technical documentation, an area where Zope traditionally
+  compares unfavourably with other frameworks.
+  
+  It was agreed that no projects should be dumped unceremoniously and that
+  a period of grace should be given to allow consumers of projects that
+  have no maintainer to raise their concerns.
+  
+  Improvements in the presentation of test results should hopefully make it
+  easier to identify potentiatlly "weak" projects and maybe even inspire
+  developers to improve their tests. Any inclusion criteria should be
+  fairly strictly applied for new projects in the hope of establishing a
+  virtuous spiral. This topic should be continued at the Zope summit in
+  Halle on 13th September.
+
+- Windows
+
+  - Compiler licenses
+    
+    Everyone has now received the MS Visual Studio compiler licences.
+
+Ongoing issues
+--------------
+
+Those issues are currently ongoing. We don't have to discuss them. We just
+need to follow up on them eventually.
+
+
+- Meta
+
+  - Review meeting itself, maybe add extra 15 minutes for "meta" once a
+    month or every two months? (postponed until 2010-06-01)
+
+  - How to organize open issues in the long run (Blueprints?
+    Other tool? Continue text files?)
+
+- Test runners / nightly builds
+
+  - Supporting Python 2.7
+
+    - Needs help from the buildbots
+
+  - Windows
+
+    - Compiler licenses (Tres, postponed until after 2010-06-14)
+
+  - Build bot organization
+
+- Bug day organization
+
+- Documentation
+
+  - Consolidate "floating" documentation into Sphinx/docs.zope.org
+
+    - Write blueprint for the consolidation effort (Theuni). See
+      https://blueprints.edge.launchpad.net/zopetoolkit-project/+spec/consolidate-documentation
+
+    - Find candidate links and gather them centrally
+
+    - Edit/update the documentation from the link list and
+      land in Sphinx-style during a sprint
+
+  - Turn ZTK package documentation into sphinx style (like zope.event)
+
+    - write bug and assign to toolkit projects (Theuni)
+
+  - Unified index?
+
+- Releases
+
+  - How to find a good point when to cut a new release for a package for
+    which fixed bugs where registered (or changes have been made)? Any
+    automation possible to alert us when changes have been sitting around
+    unreleased for a while?
+
+
+Topic proposals
+---------------
+
+- Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
+  better maintenance/release management/communication/marketing. 
+
+- Christian Theune: I'd like us to ponder how we can (in addition to the
+  housekeeping and cleanups we do) also move to do constructive work together
+  to expand the stuff that Zope packages (ZTK) is about. How do we go about
+  implementing new technologies together, like supporting HTML 5 in the
+  various parts? I'd like to start putting in new code in the foreseeable
+  future in the zope.* namespace.

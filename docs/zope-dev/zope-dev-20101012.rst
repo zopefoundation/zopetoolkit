@@ -1,0 +1,120 @@
+==========
+2010-10-12
+==========
+
+This is the agenda and summary for the weekly Zope developer meeting of
+Tuesday, 2010-10-12 on #zope@irc.freenode.org from 15:00 to 15:30 UTC.
+
+Summary
+=======
+
+The IRC log is available here:
+    http://zope3.pov.lt/irclogs-zope/%23zope.2010-10-12.log.html#t2010-10-12T18:01:32
+
+Attendees
+---------
+
+Christian Theune, Charlie Clark, Adam Groszer, Marius Gedminas
+
+Summit goal followup
+--------------------
+
+Charlie noted that the time scales on the summit goals are still missing.
+Christian reported that he originally wanted to gather detail descriptions
+with everything that was mentioned during the meeting from every individual
+on the spot but hadn't had a chance to do that. Christian signed up to ask the
+individual owners of the tasks to fill the details into the wiki
+(http://wiki.zope.org/ztk/ZopeSummit2010Summary).
+
+As some task owners were present at the meeting, we went through their tasks:
+
+Christian signed up for the Zope sprints. He detailed that he'd like to find
+topics and interested people for a few dedicated Zope sprints in 2011 until
+the end of the year. He also keeps an eye on the organization of broader
+sprints a PyCon and EuroPython as the ZF wanted to push those as well.
+
+Marius is signed up to fix the 5 most incomprehensible error messages by the
+end of the year. His research is ongoing - he's trying to get people to report
+those errors to him.
+
+Charlie is signed up to establish/improve a/the developer guide by the end of
+2010.
+
+Bug day
+-------
+
+Responses to the current bug day doodle are missing. The last bug days had
+usually quite a few people subscribe in the Doodle but substantially less
+showed up.
+
+Apart from unpredictability of schedule or keeping up committments
+that conflict with business Charlie recommended to make it more clear that
+subscribing for the whole day is not necessary to make a difference. We should
+be more inviting to people that would be happy to spend maybe 1 or 2 hours.
+
+Also, we should spend more time upfront to select which bugs to work on and
+discuss them on the mailing list so that it is clear what people will work on
+and maybe also people work on bugs before/after the bug day.
+
+
+Agenda
+======
+
+- Follow-up on summit goals
+- Review bug day, plan next bug day
+
+Ongoing issues
+--------------
+
+Those issues are currently ongoing. We don't have to discuss them. We just
+need to follow up on them eventually.
+
+
+- Meta
+    - Review meeting itself, maybe add extra 15 minutes for "meta" once a
+      month or every two months? (postponed until 2010-06-01)
+    - How to organize open issues in the long run (Blueprints?
+      Other tool? Continue text files?)
+
+- Repository policy
+
+- Test runners / nightly builds
+    - Supporting Python 2.7
+        - Needs help from the buildbots
+    - Windows
+        - Compiler licenses (Tres, postponed until after 2010-06-14)
+    - Build bot organization
+
+- Bug day organization
+
+- Documentation
+    - Consolidate "floating" documentation into Sphinx/docs.zope.org
+        - Write blueprint for the consolidation effort (Theuni)
+          see
+          https://blueprints.edge.launchpad.net/zopetoolkit-project/+spec/consolidate-documentation
+        - Find candidate links and gather them centrally
+        - Edit/update the documentation from the link list and
+          land in Sphinx-style during a sprint
+    - Turn ZTK package documentation into sphinx style (like zope.event)
+        - write bug and assign to toolkit projects (Theuni)
+    - Unified index?
+
+- Releases
+    - How to find a good point when to cut a new release for a package for
+      which fixed bugs where registered (or changes have been made)? Any
+      automation possible to alert us when changes have been sitting around
+      unreleased for a while?
+
+
+Topic proposals
+---------------
+
+- Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
+  better maintenance/release management/communication/marketing. 
+
+- Christian Theune: I'd like us to ponder how we can (in addition to the
+  housekeeping and cleanups we do) also move to do constructive work together
+  to expand the stuff that Zope packages (ZTK) is about. How do we go about
+  implementing new technologies together, like supporting HTML 5 in the
+  various parts? I'd like to start putting in new code in the foreseeable
+  future in the zope.* namespace.

@@ -1,0 +1,97 @@
+ZTK meeting - 2010-05-18
+========================
+
+Attendance
+----------
+
+ccomb, j-w, hannosch
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoging tasks, open points.
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minues were principly agreed on.
+
+- The minutes of the ztk-release-team meeting are located at
+  http://svn.zope.org/zopetoolkit/doc/source/releaseteam/
+
+Buildslaves testing the ZTK on required platforms
+
+- There have been a number of buildbot-slaves setup already. The reports of
+  these slaves should be sent to zope-test. The mail-subject needs to be
+  foramtted propely for this to work. j-w will coordinate with Jan-Jaap.
+
+- We still need slaves for 64-bit Windows. Work is underway to obtain the
+  correct Windows licenses.
+
+- ccomb has setup a buildbot for testing ZTK against released packages (not
+  SVN) on 32-bit linux. He will wake it up and have the reports send to zope-
+  test as well.
+
+Deprecating packages from ztk.cfg and zopeapp.cfg
+
+- There will be a deprecating.cfg where packages are moved from ztk.cfg and
+  zopeapp.cfg.
+
+- The "under-review" and "unresolved-dependencies" sections need special
+  scrutiny.
+
+- Tres Seaver posted a matrix depicting what ZTK packages are in use by what
+  frameworks. Each of the represenatives will review the list of packages all
+  three frameworks use. When putting the results together, this should result
+  in a cleaned up ztk.cfg, a cleanup up zopeapp.cfg and a deprecating.cfg.
+  [ccomb, hannosch, j-w]
+
+ZTK-1.0
+
+- The release team will do an initial pass on splitting the package lists into
+  ztk.cfg, zopeapp.cfg and deprecating.cfg to come to a stable set.
+
+- After this first round, we will declare the ZTK 1.0a1 to have a concrete
+  starting point.
+
+- The ZTK-1.0 will be used from Grok-1.2 and BlueBream-1.1 on. The upcoming
+  Grok-1.1 release will refer to a specific, slightly older, ZTK revision from
+  SVN. Work is going on on Grok-1.2 already and is based on a very recent
+  revision of the ZTK.
+
+- hannosch has access to http://download.zope.org/ztk/release/ for uploading
+  the releases.
+
+Tasks
+-----
+
+- We want 64bit Linux and Windows tests for the ZTK. j-w is bugging janjaap to
+  create those. Maybe contact ccomb for adding slaves to "afpy". We can resolve
+  this issue when the build reports are comming in on zope-test. [j-w]
+
+- Make sure we have a buildbot testing the ZTK releases (and not SVN) [ccomb]
+
+- Each of the represenatives will review the list of packages all three
+  frameworks use, as made by Tres. [ccomb, hannosch, j-w]
+
+Open points
+-----------
+
+- Look at and update http://docs.zope.org/zopetoolkit/about/coreextra.html for
+  adding/removing policies, probably have a deprecated.cfg file
+
+- Decide on process for new feature versions and the process for going from
+  1.1.0 alpha to a final
+
+- the list for "extra" packages still needs to be defined, we could have a
+  incoming.cfg and/or extra.cfg
+
+Next meeting
+------------
+
+2010-05-25, 14:00 to 15:00 UTC before the zope-dev meeting, in #zope

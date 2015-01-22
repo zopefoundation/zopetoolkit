@@ -1,0 +1,119 @@
+==========
+2010-08-24
+==========
+
+This is the agenda and summary for the weekly Zope developer meeting of
+Tuesday, 2010-08-24 on #zope@irc.freenode.org from 15:00 to 15:30 UTC.
+
+Summary
+=======
+
+The IRC log is available here:
+    http://zope3.pov.lt/irclogs-zope/%23zope.2010-08-24.log.html
+
+Attendees
+---------
+
+Hanno Schlichting, Charlie Clark, Christian Theune, Patrick Gerken, Adam
+Groszer
+
+Last bug day
+------------
+
+Although many people answered the Doodle for the bug day in August the actual
+participation was quite low. It seems that most people had unexpected urgent
+customer issues to deal with on that specific day.
+
+Only Michael Howitz and Jens Vagelpohl responded to the request for reports on
+the mailing list.
+
+As September will feature the DZUG conference and the Zope summit the next bug
+day will be scheduled a little further down the calendar to avoid clashes with
+travel plans and people needing to catch up with everyday business after
+travelling.
+
+
+Buildbot organization
+---------------------
+
+Adam asked for talking about organizing the buildbots more so that people can
+get a better overview of all the builds.
+
+Patrick already experimented with a script that fetches data from the
+buildbots and creates an overarching display (screenshot:
+http://picasaweb.google.de/lh/photo/jUOVCcnJEV2KeYI9R_pUCMdjTw5Dqg3R_WEjti4Vahk?feat=twitter)
+
+A small terminology debate occured where Patrick noted that people tend to use
+both 'dev' and 'trunk' in the buildbots. Hanno brought the argument that 'dev'
+is what we suffix development releases with when denoting a version and thus
+'dev'. In comparison to 'trunk', 'dev' is also agnostic to the VCS and was
+thus being favored in general.
+
+Christian got the code for the aggregator script that fetches information from
+mail.zope.org and assembles the daily messages to zope-dev. It has been
+checked into his sandbox in Subversion. We can now work on an improved version
+of that script.
+
+
+Agenda
+======
+
+- Last bug day
+- Organizing buildbots
+
+Ongoing issues
+--------------
+
+Those issues are currently ongoing. We don't have to discuss them. We just
+need to follow up on them eventually.
+
+- Abandoned projects (Tres)
+
+- Meta
+    - Review meeting itself, maybe add extra 15 minutes for "meta" once a
+      month or every two months? (postponed until 2010-06-01)
+    - How to organize open issues in the long run (Blueprints?
+      Other tool? Continue text files?)
+
+- ZTK status
+    - Towards a ZTK release
+        - Documentation
+        - Release scope
+
+- Test runners / nightly builds
+    - Supporting Python 2.7
+        - Needs help from the buildbots
+    - Windows
+        - Compiler licenses (Tres, postponed until after 2010-06-14)
+
+- Documentation
+    - Consolidate "floating" documentation into Sphinx/docs.zope.org
+        - Write blueprint for the consolidation effort (Theuni)
+          see
+          https://blueprints.edge.launchpad.net/zopetoolkit-project/+spec/consolidate-documentation
+        - Find candidate links and gather them centrally
+        - Edit/update the documentation from the link list and
+          land in Sphinx-style during a sprint
+    - Turn ZTK package documentation into sphinx style (like zope.event)
+        - write bug and assign to toolkit projects (Theuni)
+    - Unified index?
+
+- Releases
+    - How to find a good point when to cut a new release for a package for
+      which fixed bugs where registered (or changes have been made)? Any
+      automation possible to alert us when changes have been sitting around
+      unreleased for a while?
+
+
+Topic proposals
+---------------
+
+- Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
+  better maintenance/release management/communication/marketing. 
+
+- Christian Theune: I'd like us to ponder how we can (in addition to the
+  housekeeping and cleanups we do) also move to do constructive work together
+  to expand the stuff that Zope packages (ZTK) is about. How do we go about
+  implementing new technologies together, like supporting HTML 5 in the
+  various parts? I'd like to start putting in new code in the foreseeable
+  future in the zope.* namespace.

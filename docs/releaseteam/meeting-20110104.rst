@@ -1,0 +1,46 @@
+ZTK meeting - 2011-01-04
+========================
+
+Attendance
+----------
+
+j-w, ccomb, hannosch.
+
+Agenda
+------
+
+- Discussion
+- Tasks
+- Planning the next meeting
+
+Discussion
+----------
+
+* ccomb plans the release BlueBream 1.0 "final" soon.
+
+* z3c.recipe.compattest has been released and runs again in a virtualenv.
+
+* A planning is made for the ZTK-1.1 release. Since a Grok release is on the
+  horizon, it makes sense to do a ZTK-1.1 next week. j-w will announce this
+  plan to zope-dev. hannosch will write a high-level changelog for ZTK-1.1.
+
+* Since a lot of zope.app.* packages have been deprecated from the ZTK, the
+  ones that are still part of the ZTK are discussed and zope.app.appsetup in
+  particular. Both BB and Grok use this package, even though Grok is
+  investigating how to move the policy defined in zope.app.appsetup to the Grok
+  codebase.
+
+* The plan was crystalized to indeed do a ZTK-1.1 release on Tuesday January
+  11th.
+
+Tasks
+-----
+
+* hannosch: write a high-level changelog for ZTK-1.1
+
+* j-w: short announcement to zope-dev about the ZTK-1.1 release plans.
+
+Next meeting
+------------
+
+Next meeting is scheduled for January 11th 20:30 (CET) on #zope.

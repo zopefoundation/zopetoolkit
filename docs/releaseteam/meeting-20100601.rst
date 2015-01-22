@@ -1,0 +1,95 @@
+ZTK meeting - 2010-06-01
+========================
+
+Attendance
+----------
+
+ccomb, j-w, hannosch
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points.
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes were principally agreed on.
+
+Buildslaves testing the ZTK on required platforms
+
+- The test reports from the buildslaves as setup by Jan-Jaap testing the ZTK on
+  the Windows platform are now indeed sent to zope-test.
+
+- We still need 64-bit Windows slaves. Jan-Jaap notes that The Health Agency
+  will be somewhat busy the coming period, so these slaves might need to wait a
+  little more. Unless of course someone else sets up slaves.
+
+- Note that the buildslaves set up by THA test the``released`` packages and
+  thus should not need a compiler installed. So, an MSDN license is not
+  necessary for these slaves.
+
+- Ccomb made sure we have a buildbot testing the ZTK releases (and not SVN).
+
+ZTK-layout
+
+- ccomb started a ZTK branch where he made a new layout for the ZTK files.
+
+- ccomb suggested creating and maintaining an ``extras.cfg`` where packages
+  that make up "a common ecosphere" of software would be tested with and
+  against the official ZTK.
+
+- hannosch and j-w didn't see the need for such an ``extras.cfg`` as it would
+  put extra maintenance burden on the ZTK-release-team efforts without a clear
+  benefit. They're in favor of a clearly defined set of packages that define
+  the essence of a ZTK and nothing more.
+
+- After discussions a decision was made to remove the concept of the
+  ``extras.cfg`` and go from there. If at some point in the future we think
+  such a list of extra package is needed after all, we can resurrect the
+  concept.
+
+- Since most of the ZTK-consumer frameworks will actually maintain lists of
+  extra packages needed for their frameworks, it was suggested to send in
+  automated test reports about the respective ecospheres. This will provide a
+  sense of coherence and stability. (see for example the "Grok Toolkit" that
+  extends the ZTK).
+
+- Breakage of these ecospheres will be the responsibility of the respective
+  communities.
+
+- The ZTK contains sections referring to unresolved dependencies and other
+  questionable packages. These packages need to be reviewed.
+
+Tasks
+-----
+
+- We want 64bit Linux and Windows tests for the ZTK. j-w is bugging janjaap to
+  create those. Maybe contact ccomb for adding slaves to "afpy". We can resolve
+  this issue when the build reports are coming in on zope-test. [j-w]
+
+- Each of the representatives will review the list of packages all three
+  frameworks use, as made by Tres. [ccomb, hannosch, j-w]
+
+- Update the http://docs.zope.org/zopetoolkit/about/coreextra.html
+  documentation. [hannosch]
+
+- Update the ccomb branch to reflect the ``extras.cfg`` decision. [ccomb]
+
+- Review the unresolved dependencies sections in the ZTK. [j-w]
+
+Open points
+-----------
+
+- Decide on process for new feature versions and the process for going from
+  1.1.0 alpha to a final.
+
+Next meeting
+------------
+
+2010-06-15, 20:00 to 21:00 CET on #zope

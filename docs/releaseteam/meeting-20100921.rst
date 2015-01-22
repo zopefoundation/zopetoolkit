@@ -1,0 +1,64 @@
+ZTK meeting - 2010-09-21
+========================
+
+Attendance
+----------
+
+j-w, hannosch, ccomb.
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes of the last meeting were not finished in time.
+
+Tasks
+
+- Hannosch will try to work on a landing page for download.zope.org.
+
+- Hannosch, with the help of icemac, have been working on fixing test
+  dependencies for the ZTK 1.0. There is some work left. Of specific interest
+  is the zope.app.interface package that BB currently depends on.
+
+- There's a lack of overview over the various buildbots that test the ZTK (in
+  various profiles). It was suggested to add an `svn info` step to the builds.
+  This will provide enough information for reproducing (failed) builds in order
+  to effectively fix issues. Agrozer volunteered to ask the various buildbot
+  maintainers to add such a build step.
+
+- In these cases where a package breaks the ZTK builds, a maintenance branch
+  for that package will be created.
+
+- Once the ZTK 1.0 released and work for 1.1 is undertaken, even more of the
+  zope.app.* packages will be deprecated. Especially in the area of test
+  dependencies. It was noted that zope.component.testlayer,
+  zope.app.wsgi.testlayer and zope.app.appsetup.testlayer have test
+  infrastructure that could help migrating away from zope.app.testing and
+  zope.app.zcmlfiles. These testlayer modules were created by Martijn Faassen
+  and Sylvian Viollon during the two "zapp zope.app" Grok sprints.
+
+Tasks
+-----
+
+- Landing page for http://download.zope.org/zopetoolkit/. [hannosch]
+
+- Setting up new ZTK "giant" buildbot [ccomb].
+
+Open points
+-----------
+
+- ...
+
+Next meeting
+------------
+
+Next meeting is scheduled for September 28st 16:00 (CEST) on #zope.

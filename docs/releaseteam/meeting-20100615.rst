@@ -1,0 +1,72 @@
+ZTK meeting - 2010-06-15
+========================
+
+Attendance
+----------
+
+ccomb, j-w, hannosch
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points.
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes were principally agreed on.
+
+ZTK-layout
+
+- Hanno updated http://docs.zope.org/zopetoolkit/about/libraries.html to
+  reflect the ztk release team's vision.
+
+- zope.file and zope.html will be removed from the ztk as they do not seem
+  fundamental to the toolkit.
+
+- Work will continue for the other "under-review" packages.
+
+- Work will continue on implementing the decided packages policy in the ZTK.
+
+- Zope2's next release will be an alpha next week. The final is target
+  somewhere in september/october. Conceptually this new Zope2
+  release will be based on ZTK 1.0.
+
+Tasks
+-----
+
+- Update the ccomb branch to reflect the ``extras.cfg`` decision. [ccomb]
+
+- Review the unresolved dependencies sections in the ZTK. [j-w]
+
+- See about the 64-bit windows ztk buildbot slaves. [j-w]
+
+- Merge the "ccomb" branch. [hannosch and ccomb]
+
+Open points
+-----------
+
+- Decide on process for new feature versions and the process for going from
+  1.1.0 alpha to a final.
+
+- The upgrade versions buildbot updates to non-final releases, it shouldn't.
+  Example: zc.recipe.egg=1.2.3b2 # was: 1.2.2 [ccomb?]
+
+- Make an alpha release and document the release procedure.
+
+- Tres Seaver posted a matrix depicting what ZTK packages are in use by what
+  frameworks. Each of the representatives will review the list of packages all
+  three frameworks use. When putting the results together, this should result
+  in a cleaned up ztk.cfg and zopeapp.cfg.
+  [ccomb, hannosch, j-w]
+
+Next meeting
+------------
+
+Ideally somewhere in the week of 2010-06-22. Team members will keep each other
+updated during the coming week.

@@ -1,0 +1,74 @@
+ZTK meeting - 2010-08-17
+========================
+
+Attendance
+----------
+
+j-w, hannosch, ccomb.
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes of the last meeting were principally agreed on.
+
+Tasks
+
+- BB-1.0b3 uses the ZTK release.
+
+- The checkversions script includes "prefer-final" now.
+
+- http://buildbot.afpy.org/discover-ztk1.0/waterfall is a buildbot that will
+  continuously build a working list and a blacklist.
+
+- Windows slaves have been added to the buildslaves overview.
+
+Deprecation of packages in the ZTK
+
+- We'll deprecate every zope.app.* package not used by any framework
+  according to http://docs.zope.org/zopetoolkit/releaseteam/package-usage.html
+  from the ZTK.
+
+- We'll deprecate zope.documenttemplate from the ZTK.
+
+- We'll consider renaming zope.app.wsgi to zope.wsgi.
+
+- We'll need to investigate to split up zope.app.appsetup into zope.appsetup
+  and Grok- and BB-specifics. zope.appsetup could then be part of the ZTK.
+
+- We'll leave zope.server in the ZTK for 1.0 and reconsider for 1.1.
+
+- There's still a series of test failures on the Windows platform. A 1.0
+  release should see all tests pass on all chosen platforms though. This
+  requires some work to be done.
+
+Tasks
+-----
+
+- Add a remark about the discover-ztk buildbot to the release-procedures.rst
+  file [ccomb].
+
+- Change to ``*.cfg``'s for deprecating the packages [hannosch].
+
+- Request download.zope.org access from Jens Vagepohl [j-w].
+
+- Next alpha release planned for 08/23 16:00 (CEST) [hannosch, j-w].
+
+Open points
+-----------
+
+- Will Windows test failures for the ZTK block a beta?
+
+Next meeting
+------------
+
+Next meeting is scheduled for August 24 16:00 (CEST) on #zope.

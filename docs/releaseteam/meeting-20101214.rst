@@ -1,0 +1,37 @@
+ZTK meeting - 2010-12-14
+========================
+
+Attendance
+----------
+
+j-w, hannosch.
+
+Agenda
+------
+
+- Discussion
+- Tasks
+- Planning the next meeting
+
+Discussion
+----------
+
+* Hannosch tested the ZTK packages for unintentional dependencies on distribute
+  versus setuptools. His conclusion was there is no such dependency at this
+  point. This is good.
+
+* Several package trunks relied on un-released versions of other packages.
+  Hannosch released several packages to resolve this situation.
+
+* z3c.recipe.compattest needs a release to fix its inability to run in a
+  virtualenv. This will be taken care of by Jan-Jaap Driessen.
+
+Tasks
+-----
+
+n/a
+
+Next meeting
+------------
+
+Next meeting is scheduled for January 4th 20:30 (CET) on #zope.

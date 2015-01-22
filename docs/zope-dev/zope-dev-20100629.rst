@@ -1,0 +1,110 @@
+==========
+2010-06-29
+==========
+
+This is the agenda and summary for the weekly Zope developer meeting of
+Tuesday, 2010-06-29 on #zope@irc.freenode.org from 15:00 to 15:30 UTC.
+
+Summary
+=======
+
+The IRC log is available here:
+    http://zope3.pov.lt/irclogs-zope/%23zope.2010-06-29.log.html#t2010-06-29T18:00:17
+
+Attendees
+---------
+
+Charlie Clark, Adam Groszer, Jens Vagelpohl, Chris McDonough
+
+KGS 3.4.1 release
+-----------------
+
+The KGS 3.4.1 was released and Adam was thanked for his work. He pointed out
+that the checklist for announcements contained a reference to a German
+magazine that requires a German translation but hasn't found any German
+willing to do the translation yet. He was pointed to ask on the mailing list.
+
+The topic of the end of life for Zope 3 releases crept up again and it was
+pointed out that Zope 3.4 is the last major release: there will be no Zope 3.5
+but BlueBream.
+
+Zope summit
+-----------
+
+Some people threw in some thoughts they had about discussing future Zope
+developments. Here's a paraphrased list of what was said on IRC:
+
+* Charlie Clark would like to ponder certification on software quality
+  (touching test coverage)
+* Charlie Clark would like to see more explanation on how to use a
+  component-based approach for solving problems instead of adding more
+  features
+* Adam would like to look around at "others" to find out where Zope is missing
+  out
+* Charlie and Chris think that the "bicycle toolkit" should be discussed
+
+
+Agenda
+======
+
+- Wrap up/review of KGS 3.4.1 release, any next steps?
+
+- Expectations for the upcoming Zope summit?
+
+
+
+Ongoing issues
+--------------
+
+Those issues are currently ongoing. We don't have to discuss them. We just
+need to follow up on them eventually.
+
+- ZTK status
+    - Towards a ZTK release
+        - Documentation
+        - Release scope
+
+- Test runners / nightly builds
+    - Windows
+        - Compiler licenses (Tres, postponed until after 2010-06-14)
+        - Win egg builder (Adam)
+        - Documentation about VM setup (Adam)
+    - Supporting Python 2.7
+        - Needs help from the buildbots
+
+- Documentation
+    - Consolidate "floating" documentation into Sphinx/docs.zope.org
+        - write blueprint for the consolidation effort (Theuni)
+        - Find candidate links and gather them centrally
+        - Edit/update the documentation from the link list and
+          land in Sphinx-style during a sprint
+    - Turn ZTK package documentation into sphinx style (like zope.event)
+        - write bug and assign to toolkit projects (Theuni)
+    - Provide package documentation under docs.zope.org/<packagename> and keep
+      updated based on the projects' trunks. (Jens)
+
+- Releases
+    - How to find a good point when to cut a new release for a package for
+      which fixed bugs where registered (or changes have been made)? Any
+      automation possible to alert us when changes have been sitting around
+      unreleased for a while?
+
+- Meta
+    - Review meeting itself, maybe add extra 15 minutes for "meta" once a
+      month or every two months? (postponed until 2010-06-01)
+    - How to organize open issues in the long run (Blueprints?
+      Other tool? Continue text files?)
+
+
+Topic proposals
+---------------
+
+- Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
+  better maintenance/release management/communication/marketing. 
+
+- Christian Theune: I'd like us to ponder how we can (in addition to the
+  housekeeping and cleanups we do) also move to do constructive work together
+  to expand the stuff that Zope packages (ZTK) is about. How do we go about
+  implementing new technologies together, like supporting HTML 5 in the
+  various parts? I'd like to start putting in new code in the foreseeable
+  future in the zope.* namespace.

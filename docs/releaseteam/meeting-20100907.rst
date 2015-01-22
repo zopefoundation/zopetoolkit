@@ -1,0 +1,66 @@
+ZTK meeting - 2010-09-07
+========================
+
+Attendance
+----------
+
+j-w, hannosch, ccomb.
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes of the last meeting were not finished in time.
+
+Tasks
+
+- The 1.0a3 release was made just after the last meeting. Thusfar the
+  releaseteam did not get negative feedback on this release.
+
+- There are not too many Windows test failures left and all had to do with
+  support for Python-2.4.4.
+
+- The documentation status for the packages of the ZTK was discussed. They
+  should be easily accessible. They are now on
+  http://docs.zope.org/ztkpackages.html and
+  http://docs.zope.org/ztkapppackages.html. For the 1.0 release the releaseteam
+  deems the current status as sufficient. Documentation quality could affect a
+  package's status within the ZTK.
+
+- The landing page on http://download.zope.org/zopetoolkit/ should provide
+  helpful pointers to more information.
+
+- We'd like to have an aggregated changelog for the ZTK packages. The BB
+  project has some scripts that maybe can be reused.
+
+- hannosch and j-w will attend the Zope Summit on September 13th and 14th
+  @gocept.
+
+Tasks
+-----
+
+- Landing page for http://download.zope.org/zopetoolkit/. [hannosch]
+
+- Windows test failures [j-w]
+
+- Add a remark about the discover-ztk buildbot to the release-procedures.rst
+  file [ccomb].
+
+Open points
+-----------
+
+- ...
+
+Next meeting
+------------
+
+Next meeting is scheduled for September 21st 16:00 (CEST) on #zope.

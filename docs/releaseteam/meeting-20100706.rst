@@ -1,0 +1,63 @@
+ZTK meeting - 2010-07-06
+========================
+
+Attendance
+----------
+
+j-w, hannosch, ccomb.
+
+Agenda
+------
+
+- Minutes of last meeting
+- Follow-up on tasks, open points
+- New and ongoing tasks, open points.
+- Planning the next meeting
+
+Discussion
+----------
+
+Minutes of last meeting
+
+- The minutes of the last meeting were principally agreed on.
+
+ZTK alpha release.
+
+- Not much feedback from "direct consumers", Hanno will ask for in direct
+  communication with some of the known "consumers".
+
+- Grok works with the released alpha(!).
+
+- Both Grok and Zope2 use their own "toolkits", that are extending the ZTK.
+  Bluebream does not (yet) have a "bbkit".
+
+- The roadmap for the 1.0 release is: 1.0b1 around August 15th, 1.0 final in
+  September. Dates will be more precise after the holidays of ccomb and j-w.
+
+Tasks
+-----
+
+- Checkversions script will be updated [ccomb]
+
+- Add windows slaves to overview of buildslaves [hannosch]
+
+- Test BB against ZTK alpha release and report [ccomb]
+
+- The upgrade versions buildbot updates to non-final releases, it shouldn't.
+  Example: zc.recipe.egg=1.2.3b2 # was: 1.2.2 [ccomb?]
+
+- Tres Seaver posted a matrix depicting what ZTK packages are in use by what
+  frameworks. Each of the representatives will review the list of packages all
+  three frameworks use. When putting the results together, this should result
+  in a cleaned up ztk.cfg and zopeapp.cfg. [ccomb, hannosch, j-w]
+
+Open points
+-----------
+
+- Decide on process for new feature versions and the process for going from
+  1.1.0 alpha to a final.
+
+Next meeting
+------------
+
+Next meeting is scheduled for July 13 16:00 (CET) on #zope.
