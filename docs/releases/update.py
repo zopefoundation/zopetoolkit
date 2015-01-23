@@ -47,8 +47,8 @@ DEPENDENCY_PACKAGE_LINE = PACKAGE_LINE_BASE + """
 """
 
 PACKAGE_LINE = PACKAGE_LINE_BASE + """
-      - `Bugs <http://github.com/zopefoundation/%(name)s>/issues`_ |
-        `Git <https://github.com/zopefoundation/%(name)s>`_ \
+      - `Bugs <http://github.com/zopefoundation/%(name)s>/issues`__ |
+        `Git <https://github.com/zopefoundation/%(name)s>`__ \
 """
 
 GENERATED_WARNING = """\
