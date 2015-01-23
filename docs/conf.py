@@ -375,6 +375,10 @@ SUBPACKAGES = [
     'structuredtext',
 ]
 def _sub_url(pkg):
-    return 'file://%s/src/zope.%s/docs/_build/html' % (WHERE, pkg)
+    path = '%s/src/zope.%s/docs/_build/html' % (WHERE, pkg)
+    if os.path.exists(path):
+        return 'file://%s/src/zope.%s/docs/_build/html' % (WHERE, pkg)
+    return 'http://docs.zope.org/zope.%s' % pkg
+
 intersphinx_mapping = dict([(pkg, (_sub_url(pkg), None))
                                 for pkg in SUBPACKAGES])
