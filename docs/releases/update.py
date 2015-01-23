@@ -213,4 +213,10 @@ def main(releases):
 
 
 if __name__ == '__main__':
-    main([(x, x) for x in sys.argv[1:]])
+    args = []
+    for arg in sys.argv[1:]:
+        if ':' in arg:
+            args.append(tuple(arg.split(':', 1)))
+        else:
+            args.append((arg, arg))
+    main(args)
