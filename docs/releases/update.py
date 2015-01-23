@@ -125,18 +125,18 @@ def packages(config, key):
 def find_releases():
     """Return a list of ZTK releases.
     """
-    yield ('trunk', 'master')
+    yield ('trunk', 'master', None)
 
     lines = subprocess.check_output(['git', 'tag', '-l']).strip().splitlines()
     lines = [x.decode('ascii') for x in lines]
     for line in sorted(lines, key=parse_version, reverse=True):
         tag = line.strip()
         if 'dev' not in line:
-            yield (tag, tag)
+            yield (tag, tag, None)
 
 def only_if_missing(releases):
     for release in releases:
-        version, _ = release
+        version, _, _ = release
         if not os.path.exists(
                 os.path.join('docs/releases', 'overview-%s.rst' % version)):
             yield release
@@ -149,11 +149,15 @@ def main(releases):
     if not releases:
         releases =  list(only_if_missing(find_releases()))
 
-    for release, tag in releases:
+    for release, tag, target in releases:
         print("Writing package list for %s" % release)
         config = RawConfigParser()
         config.optionxform = str
-        cfg = subprocess.check_output(['git', 'show', '%s:ztk.cfg' % tag])
+        if target is None:
+            cfg = subprocess.check_output(['git', 'show', '%s:ztk.cfg' % tag])
+        else:
+            with open(os.path.join(target, 'ztk.cfg'), 'rb') as f:
+                cfg = f.read()
         try:
             config.read_string(cfg.decode('ascii'))
         except Error as e:
@@ -162,8 +166,12 @@ def main(releases):
 
         versions = RawConfigParser()
         versions.optionxform = str
-        cfg = subprocess.check_output(
+        if target is None:
+            cfg = subprocess.check_output(
                                 ['git', 'show', '%s:ztk-versions.cfg' % tag])
+        else:
+            with open(os.path.join(target, 'ztk-versions.cfg'), 'rb') as f:
+                cfg = f.read()
         try:
             versions.read_string(cfg.decode('ascii'))
         except Error as e:
@@ -211,8 +219,12 @@ def main(releases):
             _lineout(title)
             _lineout("=" * len(title))
             _lineout(RELEASE_OVERVIEW)
-            index = subprocess.check_output(
-                                    ['git', 'show', '%s:index.rst' % tag])
+            if target is None:
+                index = subprocess.check_output(
+                                        ['git', 'show', '%s:index.rst' % tag])
+            else:
+                with open(os.path.join(target, 'index.rst'), 'rb') as f:
+                    index = f.read()
             _lineout(index.decode('utf-8'))
             _lineout(RELEASE_PACKAGES % {'release': release})
 
@@ -237,8 +249,12 @@ def main(releases):
 if __name__ == '__main__':
     args = []
     for arg in sys.argv[1:]:
+        target = None
+        if '~' in arg:
+            arg, target = arg.rsplit('~', 1)
         if ':' in arg:
-            args.append(tuple(arg.split(':', 1)))
+            release, tag = arg.split(':', 1)
         else:
-            args.append((arg, arg))
+            release = tag = arg
+        args.append((release, tag, target))
     main(args)

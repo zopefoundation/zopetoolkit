@@ -10,5 +10,4 @@ develop-eggs/
 eggs/
 parts/
 src/
-docs/releases/*.rst
 docs/_build
