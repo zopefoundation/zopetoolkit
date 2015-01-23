@@ -86,7 +86,7 @@ included.
 
 
 def package_list(packages, config, _lineout, line=PACKAGE_LINE):
-    _lineout(TABLE_HEADER)
+    lines = [TABLE_HEADER]
     for package in sorted(packages):
         version = config.get('versions', package)
         try:
@@ -103,12 +103,14 @@ def package_list(packages, config, _lineout, line=PACKAGE_LINE):
         doap.parse(doap_xml)
         description = doap.find('.//{%s}shortdesc' % DOAP_NS).text
         homepage = 'http://pypi.python.org/pypi/%s/%s' % (package, version)
-        _lineout(line % dict(name=package,
-                             homepage=homepage,
-                             description=description,
-                             version=version,
-                            ))
-    _lineout('')
+        lines.append(line % dict(name=package,
+                                 homepage=homepage,
+                                 description=description,
+                                 version=version,
+                                ))
+    lines.append('')
+    for line in lines:
+        _lineout(line)
 
 
 def packages(config, key):
@@ -173,10 +175,10 @@ def main(releases):
             heading = 'Zope Toolkit %s packages' % release
             _lineout(heading)
             _lineout('=' * len(heading))
-            included = packages(config, 'included')
+            included = list(packages(config, 'included'))
             package_list(included, versions, _lineout)
 
-            deprecating = packages(config, 'deprecating')
+            deprecating = list(packages(config, 'deprecating'))
             if deprecating:
                 _lineout('Deprecating')
                 _lineout('-----------')
