@@ -61,14 +61,17 @@ TAGS_DIR = os.path.join(os.pardir, 'tags')
 RELEASE_OVERVIEW = """
 This document covers major changes in this release that can lead to
 backward-incompatibilities and explains what to look out for when updating.
+"""
 
-.. contents::
-   :local:
+RELEASE_PACKAGES = """
 
 List of packages
 ----------------
 
-See the separate `package list <packages-%s.html>`_ document.
+.. toctree::
+   :maxdepth: 1
+
+   packages-%(release)s
 """
 
 RELEASES_OVERVIEW = """
@@ -172,9 +175,15 @@ def main(releases):
 
             _lineout(GENERATED_WARNING)
 
+            _lineout('')
+            _lineout('.. _packages-%s:' % release)
+            _lineout('')
             heading = 'Zope Toolkit %s packages' % release
             _lineout(heading)
             _lineout('=' * len(heading))
+            _lineout('')
+            _lineout('See :ref:`overview-%s`.' % release)
+            _lineout('')
             included = list(packages(config, 'included'))
             package_list(included, versions, _lineout)
 
@@ -195,13 +204,17 @@ def main(releases):
         with open(os.path.join('docs', 'releases',
                                'overview-%s.rst' % release), 'w') as output:
             _lineout(GENERATED_WARNING)
+            _lineout('')
+            _lineout('.. _overview-%s:' % release)
+            _lineout('')
             title = "Zope Toolkit %s" % release
             _lineout(title)
             _lineout("=" * len(title))
-            _lineout(RELEASE_OVERVIEW % release)
+            _lineout(RELEASE_OVERVIEW)
             index = subprocess.check_output(
                                     ['git', 'show', '%s:index.rst' % tag])
             _lineout(index.decode('utf-8'))
+            _lineout(RELEASE_PACKAGES % {'release': release})
 
     print("Writing overview")
 
