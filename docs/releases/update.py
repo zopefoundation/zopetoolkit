@@ -47,7 +47,7 @@ DEPENDENCY_PACKAGE_LINE = PACKAGE_LINE_BASE + """
 """
 
 PACKAGE_LINE = PACKAGE_LINE_BASE + """
-      - `Bugs <http://github.com/zopefoundation/%(name)s>/issues`__ |
+      - `Bugs <http://github.com/zopefoundation/%(name)s/issues>`__ |
         `Git <https://github.com/zopefoundation/%(name)s>`__ \
 """
 
@@ -129,13 +129,20 @@ def find_releases():
         if 'dev' not in line:
             yield (tag, tag)
 
+def only_if_missing(releases):
+    for release in releases:
+        version, _ = release
+        if not os.path.exists(
+                os.path.join('docs/releases', 'overview-%s.rst' % version)):
+            yield release
+
 def main(releases):
 
     def _lineout(msg, *args):
         output.write('%s\n' % (msg % args))
 
     if not releases:
-        releases =  list(find_releases())
+        releases =  list(only_if_missing(find_releases()))
 
     for release, tag in releases:
         print("Writing package list for %s" % release)
