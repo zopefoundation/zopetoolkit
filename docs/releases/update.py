@@ -121,12 +121,33 @@ def packages(config, key):
     return filter(None, result)
 
 
+def _check_output(args):
+
+    if hasattr(subprocess, 'check_output'):
+        return subprocess.check_output(args)
+
+    process = subprocess.Popen(args, stdout=subprocess.PIPE)
+    try:
+        output, _ = process.communicate('')
+    except:
+        process.kill()
+        process.wait()
+        raise
+
+    retcode = process.poll()
+    if retcode:
+        raise subprocess.CalledProcessError(
+            retcode, process.args, output=output)
+
+    return output
+
+
 def find_releases():
     """Return a list of ZTK releases.
     """
     yield ('trunk', 'master', None)
 
-    lines = subprocess.check_output(['git', 'tag', '-l']).strip().splitlines()
+    lines = _check_output(['git', 'tag', '-l']).strip().splitlines()
     lines = [x.decode('ascii') for x in lines]
     for line in sorted(lines, key=parse_version, reverse=True):
         tag = line.strip()
@@ -160,7 +181,7 @@ def main(releases):
         config = RawConfigParser()
         config.optionxform = str
         if target is None:
-            cfg = subprocess.check_output(['git', 'show', '%s:ztk.cfg' % tag])
+            cfg = _check_output(['git', 'show', '%s:ztk.cfg' % tag])
         else:
             with open(os.path.join(target, 'ztk.cfg'), 'rb') as f:
                 cfg = f.read()
@@ -173,7 +194,7 @@ def main(releases):
         versions = RawConfigParser()
         versions.optionxform = str
         if target is None:
-            cfg = subprocess.check_output(
+            cfg = _check_output(
                                 ['git', 'show', '%s:ztk-versions.cfg' % tag])
         else:
             with open(os.path.join(target, 'ztk-versions.cfg'), 'rb') as f:
@@ -226,7 +247,7 @@ def main(releases):
             _lineout("=" * len(title))
             _lineout(RELEASE_OVERVIEW)
             if target is None:
-                index = subprocess.check_output(
+                index = _check_output(
                                         ['git', 'show', '%s:index.rst' % tag])
             else:
                 with open(os.path.join(target, 'index.rst'), 'rb') as f:
