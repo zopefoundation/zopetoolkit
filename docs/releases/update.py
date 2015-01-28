@@ -17,8 +17,8 @@ try:
     from urllib2 import HTTPError
 except ImportError:
     from urllib.error import HTTPError
-import xml.etree.ElementTree
 
+from lxml.etree import fromstring
 from pkg_resources import parse_version
 
 socket.setdefaulttimeout(15)
@@ -95,15 +95,15 @@ def package_list(packages, config, _lineout, line=PACKAGE_LINE):
         try:
             doap_xml = urlopen(
                 'http://pypi.python.org/pypi?:action=doap&name=%s&version=%s' %
-                (package, version)).read().decode('utf-8')
+                (package, version)).read()
         except HTTPError:
             return
         if not doap_xml:
             # someone removed a released package from PyPi - ARGHHH!
             return
-        doap_xml = io.StringIO(doap_xml.replace('\f', ''))
-        doap = xml.etree.ElementTree.ElementTree()
-        doap.parse(doap_xml)
+        if not isinstance(doap_xml, bytes): # lxml wants bytes
+            doap_xml = doap_xml.encode('utf-8')
+        doap = fromstring(doap_xml.replace(b'\f', b''))
         description = doap.find('.//{%s}shortdesc' % DOAP_NS).text
         homepage = 'http://pypi.python.org/pypi/%s/%s' % (package, version)
         lines.append(line % dict(name=package,
@@ -117,9 +117,8 @@ def package_list(packages, config, _lineout, line=PACKAGE_LINE):
 
 
 def packages(config, key):
-    result = config.get('ztk', key).split('\n')
-    result = filter(None, map(str.strip, result))
-    return result
+    result = [x.strip() for x in config.get('ztk', key).split('\n')]
+    return filter(None, result)
 
 
 def find_releases():
@@ -141,6 +140,13 @@ def only_if_missing(releases):
                 os.path.join('docs/releases', 'overview-%s.rst' % version)):
             yield release
 
+def _load_config(parser, bytes_read):
+    text = bytes_read.decode('ascii')
+    try:
+        parser.read_string(text)
+    except AttributeError: # Python2
+        parser.readfp(io.StringIO(text))
+
 def main(releases):
 
     def _lineout(msg, *args):
@@ -159,7 +165,7 @@ def main(releases):
             with open(os.path.join(target, 'ztk.cfg'), 'rb') as f:
                 cfg = f.read()
         try:
-            config.read_string(cfg.decode('ascii'))
+            _load_config(config, cfg)
         except Error as e:
             print("Unable to parse config: %s" % str(e))
             continue
@@ -173,7 +179,7 @@ def main(releases):
             with open(os.path.join(target, 'ztk-versions.cfg'), 'rb') as f:
                 cfg = f.read()
         try:
-            versions.read_string(cfg.decode('ascii'))
+            _load_config(versions, cfg)
         except Error as e:
             print("Unable to parse versions: %s" % str(e))
             continue
