@@ -372,14 +372,15 @@ SUBPACKAGES = [
     'proxy',
     'schema',
     'security',
-# objects.inv not built correctly on docs.zope.org:
-#    'structuredtext',
+    'structuredtext',
 ]
 def _sub_url(pkg):
     path = '%s/src/zope.%s/docs/_build/html' % (WHERE, pkg)
     if os.path.exists(path):
         return 'file://%s/src/zope.%s/docs/_build/html' % (WHERE, pkg)
-    return 'http://docs.zope.org/zope.%s' % pkg
+    # Not until docs.zope.org gets updated with objects.inv
+    #return 'http://docs.zope.org/zope.%s' % pkg
 
-intersphinx_mapping = dict([(pkg, (_sub_url(pkg), None))
-                                for pkg in SUBPACKAGES])
+urls = [(pkg, (_sub_url(pkg), None)) for pkg in SUBPACKAGES]
+urls = [(pkg, pair) for pkg, pair in urls if pair[0] is not None]
+intersphinx_mapping = dict(urls)
