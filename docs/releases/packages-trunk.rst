@@ -132,8 +132,8 @@ See :ref:`overview-trunk`.
       - `Bugs <http://github.com/zopefoundation/zope.deferredimport/issues>`__ |
         `Git <https://github.com/zopefoundation/zope.deferredimport>`__ 
 
-    * - `zope.deprecation <http://pypi.python.org/pypi/zope.deprecation/4.1.1>`_
-      - 4.1.1
+    * - `zope.deprecation <http://pypi.python.org/pypi/zope.deprecation/4.1.2>`_
+      - 4.1.2
       - Zope Deprecation Infrastructure
       - `Bugs <http://github.com/zopefoundation/zope.deprecation/issues>`__ |
         `Git <https://github.com/zopefoundation/zope.deprecation>`__ 
@@ -438,8 +438,8 @@ Dependencies
       - A pluggable command-line frontend, including commands to setup package file layouts
       - 
 
-    * - `Pygments <http://pypi.python.org/pypi/Pygments/2.0.1>`_
-      - 2.0.1
+    * - `Pygments <http://pypi.python.org/pypi/Pygments/2.0.2>`_
+      - 2.0.2
       - Pygments is a syntax highlighting package written in Python.
       - 
 
@@ -473,8 +473,8 @@ Dependencies
       - ZEO
       - 
 
-    * - `ZODB <http://pypi.python.org/pypi/ZODB/4.0.1>`_
-      - 4.0.1
+    * - `ZODB <http://pypi.python.org/pypi/ZODB/4.1.0>`_
+      - 4.1.0
       - Zope Object Database: object database and persistence
       - 
 
@@ -558,8 +558,8 @@ Dependencies
       - Sphinx extension: auto-generates API docs from Zope interfaces
       - 
 
-    * - `setuptools <http://pypi.python.org/pypi/setuptools/11.3.1>`_
-      - 11.3.1
+    * - `setuptools <http://pypi.python.org/pypi/setuptools/12.0.4>`_
+      - 12.0.4
       - Easily download, build, install, upgrade, and uninstall Python packages
       - 
 
