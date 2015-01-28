@@ -372,7 +372,8 @@ SUBPACKAGES = [
     'proxy',
     'schema',
     'security',
-    'structuredtext',
+# objects.inv not built correctly on docs.zope.org:
+#    'structuredtext',
 ]
 def _sub_url(pkg):
     path = '%s/src/zope.%s/docs/_build/html' % (WHERE, pkg)
