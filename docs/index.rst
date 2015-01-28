@@ -31,4 +31,3 @@ Documentation
    zope-dev/index
    releaseteam/index
    steeringgroup/index
-   packages
