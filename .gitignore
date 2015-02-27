@@ -11,3 +11,5 @@ eggs/
 parts/
 src/
 docs/_build
+include/
+lib/
