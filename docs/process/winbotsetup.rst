@@ -50,7 +50,7 @@ If you need a NEW package to be processed contact:
 * Hanno Schlichting (hanno-at-hannosch-dot-eu)
 
 The package that creates the eggs is here:
-svn://svn.zope.org/repos/main/zope.wineggbuilder
+https://github.com/zopefoundation/zope.wineggbuilder
 
 
 Detailed winbot configuration description
@@ -87,11 +87,11 @@ Windows basics
 
   * automatic windows update is OFF! (I hate when it f..s up the system)
 
-  * download: (all downloaded stuff goes into c:\\install)
+  * download: (all downloaded stuff goes into d:\\install)
 
     * firefox
     * freecommander (my personally preferred stuff)
-    * programmers notepad (my personal preferred stuff)
+    * programmers notepad (my personally preferred stuff)
     * mydefrag
     * collabnet svn client
     * pythons 2.4 ... 2.7
@@ -168,6 +168,25 @@ pythons + pywin32 + setuptools
     * beat it until it works (permissions, etc....)
 
   * put an apache in front of the whole
+
+Python 3.3 and 3.4 eggs
+-----------------------
+
+  * need to setup MSVC10
+  
+    * step by step instructions here:
+      http://blog.ionelmc.ro/2014/12/21/compiling-python-extensions-on-windows/
+    
+    * make sure you create that vcvars64.bat!
+
+  * c:\\python33_32 NOT default + _clean
+  * c:\\python33_64 NOT default + _clean
+
+  * c:\\python34_32 NOT default + _clean
+  * c:\\python34_64 NOT default + _clean
+  
+  * install pywin32
+  * install setuptools into non-clean folders
 
 Buildbot for tests
 ------------------
