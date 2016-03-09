@@ -13,3 +13,6 @@ src/
 docs/_build
 include/
 lib/
+lib64
+pip-selfcheck.json
+pyvenv.cfg
