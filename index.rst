@@ -35,8 +35,8 @@ should follow these in most cases.
 Python versions
 ---------------
 
-The ZTK 2.0 release series supports Python 2.6, 2.7 and 3.3. Some libraries
-included in the ZTK support Python 3.2.
+The ZTK 2.0 release series supports Python 2.7, 3.3 and 3.4. Some libraries
+included in the ZTK support Python 3.2 and/or Python 3.5.
 
 News
 ----
@@ -44,8 +44,8 @@ News
 Python versions
 ~~~~~~~~~~~~~~~
 
-Python 2.5 is no longer supported by this version of the ZTK. Support for
-Python 3.3 has been added.
+Python 2.5 and Python 2.6 are no longer supported by this version of the ZTK.
+Support for Python 3.3 and 3.4 has been added.
 
 ZODB 4
 ~~~~~~
