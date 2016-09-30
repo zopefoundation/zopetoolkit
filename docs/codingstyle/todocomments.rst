@@ -3,7 +3,7 @@ TODO comments
 
 Occasionally you may need to note a place in a file that needs to be
 revisited later. There are three standard codes used to designate such
-places: ``XXX``, ``TODO``, and. ``BBB``
+places: ``XXX``, ``TODO``, and ``BBB``.
 
 Depending on the type of the file, those codes should be placed
 within a comment according to the applicable syntax.
@@ -45,4 +45,4 @@ BBB
   When adding code to preserve backward compatibility, use a BBB
   comment with a date. For example::
 
-    # BBB 2004-07-08, preserves use of 'get_foo' function
+    # BBB 2016-07-08, preserves use of 'get_foo' function

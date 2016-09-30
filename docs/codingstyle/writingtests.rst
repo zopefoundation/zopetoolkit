@@ -2,24 +2,18 @@ Writing tests
 =============
 
 For any module 'somepkg.somemod' there should be a corresponding
-unit test module 'somepkg.somemod.tests.testSomemod'.  Or if more than one
-set of unit tests is desired, multiple test modules of the form
-'somepkg.somemod.tests.testSomemodYYYY'.  Note that this means
+unit test module 'somepkg.somemod.tests.test_somemod'. Or if more than
+one set of unit tests is desired, multiple test modules of the form
+'somepkg.somemod.tests.test_somemodYYYY'.  Note that this means
 that your 'somemod' directory needs to have a 'tests' subdirectory,
 and that that subdirectory must have a (normally empty) '__init__.py'
 file in it.
 
-The file 'ut.py' in the root directory of the Z3 tree contains
-a skeleton file appropriate for using in building unit test
-modules.  If you use ut.py and follow the guidelines above,
-then your unit tests will automatically be run when 'test.py'
-is run.
-
 In your unit test class, begin all unit test methods with the string 
 'test'.
-If you use the !CleanUp class support (see the comments in 'ut.py'),
-make sure that your 'setUp' and 'tearDown' methods call the
-!CleanUp class's 'setUp' and 'tearDown' methods::
+If you use the CleanUp class support, make sure that your 'setUp'
+and 'tearDown' methods call the CleanUp class's 'setUp' and
+'tearDown' methods::
 
     class TestSomething(CleanUp):
         def setUp(self):
@@ -30,8 +24,9 @@ make sure that your 'setUp' and 'tearDown' methods call the
             #your teardown here
             CleanUp.tearDown(self)
 
-**Never** give your test methods a docstring!  Doing so makes it very difficult
-to find your test method when using the verbose output.  Use a comment instead.
+**Never** give your test methods a docstring! Doing so makes it very
+difficult to find your test method when using the verbose output.
+Use a comment instead.
 
 Call your test class TestSomething, never just Test.
 
@@ -42,8 +37,7 @@ to write test methods that exercise each individual method of
 the class.  It is a good idea to organize these tests according to
 the Interfaces implemented by the class under test.  In fact, it
 is often best to implement such tests in separate mixin classes,
-one class per Interface.  WritingInterfaceTests expands
-on this concept in more detail.
+one class per Interface.
 
 Within the unit tests themselves, the Zope style is to use
 the positive rather than the double negative assertions.
@@ -71,6 +65,3 @@ leads to more robust and general unit tests:
     can write a "helper function" to do the import and create and
     return instance(s) of the objects needed for testing,
     and call it from the start of each unit test.
-
-Other Best Practices suggestions welcome!
-

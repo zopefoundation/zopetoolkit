@@ -19,23 +19,14 @@ conventions.
 License statement, module docstring
 -----------------------------------
 
-Python files should always contain the most actual license comment at the top followed by the
-module documentation string.
-
-The docstring should contain a reference about version control status.
-The example given is valid for Subversion.
-
-.. note::
-
-   The community has decided not to continue the use of the CVS keyword
-   expansion feature, e.g., the ``$Id`` tag.  Any keywords can be removed as
-   they are found during module cleanup.
+Python files should always contain the most current license comment at
+the top followed by the module documentation string.
 
 Here is the template::
 
   ##############################################################################
   #
-  # Copyright (c) 2009 Zope Foundation and Contributors.
+  # Copyright (c) 2016 Zope Foundation and Contributors.
   # All Rights Reserved.
   #
   # This software is subject to the provisions of the Zope Public License,
@@ -51,28 +42,12 @@ Here is the template::
   Module documentation goes here.
   """
 
-.. note::
-    TODO We never finished discussing license years. When should the
-    license year be updated? Do we have to enumerate individual years or
-    is it ok to give ranges?
-
-    Guido (around 2002) pointed out the FSF's rules. Those should be
-    re-evaluated.
-
-    Efge pointed out that in the US only the first year of publication
-    needs to be given. (See http://www.loc.gov/copyright/circs/circ03.html).
-
-    This also points out that we need an understanding of when code is
-    published the first time. Can checking into a public repository can
-    count as published? The FSF seemed to understand inclusions in
-    release tarballs as publications.
-
 
 Whitespace
 ----------
 
-Trailing whitespace should not occur, nor should blank lines at the end
-of files.
+Trailing whitespace should not occur, nor should multiple blank lines
+at the end of files.
 
 
 Import statements
@@ -82,31 +57,16 @@ All imports should be at the top of the module, after the module
 docstring and/or comments, but before module globals.
 
 It is sometimes necessary to violate this to address circular import
-pronlems. If this is the case, add a comment to the import section at
+problems. If this is the case, add a comment to the import section at
 the top of the file to flag that this was done.
 
-Order your imports by simply ordering the lines as `sort` would. Don't
-create blocks of imports with additional empty lines as PEP 8 recommends.
+Refrain from using relative imports. Instead of::
 
-.. note::
-    TODO This rule has been recommended by Jim but hasn't been
-    officially established.
-
-
-Refrain from using relative imports.  Instead of::
-
-    import foo # from same package
+    import .foo  # from same package
 
 you can write::
 
-    from Zope.App.ThisPackage import foo
-
-.. note::
-    TODO Clarify, clean up wording. I think we also avoid re-imports of
-    symbols and most times prefer the ``import`` over the ``from`` form.
-
-    Relative imports should be avoided, I'm not sure about the style 
-    once we start getting real relative imports from Python.
+    from zope.package.module import foo
 
 
 Attribute and method names
@@ -114,9 +74,9 @@ Attribute and method names
 
 The naming of attributes as recommended by PEP 8 is controversial. PEP 8
 prefers ``attribute_name`` over ``attributeName``. Newer code tends to
-prefer the use of underscores over camel case. However, Zope 3 has been
+prefer the use of underscores over camel case. However, Zope has been
 built originally with the latter rule and a lot of code still use this
-meme.
+scheme.
 
 Boolean-type attributes should always form a true-false-question,
 typically using "has" or "is" as prefix. Example: ``is_required`` instead
@@ -139,25 +99,6 @@ Examples::
     command()
     string()
 
-
-.. note::
-    TODO This rule needs clarification.
-
-
-Global variable names
----------------------
-
-Public global variables names are spelled with CapitalizedWords, as in
-``Folder`` or ``RoleService``.
-
-An exception is made for global non-factory functions, which are
-typically spelled with ``mixedCase``.
-
-.. note::
-    TODO This rule needs clarification. What is a global variable
-    anyway? It's not a constant AFAICT.
-
-
 Local variables
 ---------------
 
@@ -165,9 +106,9 @@ Single-letter variable names should be avoided unless:
 
  - Their meaning is extremely obvious from the context, and
 
- - Brevity is desireable
+ - Brevity is desirable
 
-The most obviouse case for single-letter variables is for iteration
+The most obvious case for single-letter variables is for iteration
 variables.
 
 
@@ -205,19 +146,6 @@ error-prone than comparing sliced strings::
     if foo[-5:]=='.html':
         ...
 
-.. note::
-    TODO: Is this rule already PEP 8?
-
-When checking if a string is a string, keep in mind that it might be a
-unicode string too! The ``basestring`` type matches both ``str`` and
-``unicode`` objects::
-
-    if isinstance(obj, basestring):
-        ...
-
-.. note::
-    TODO Does PEP 8 talk about this already?
-
 Type checks
 -----------
 
@@ -238,12 +166,9 @@ Marker objects
 --------------
 
 Use instances of ``object`` if you need to construct marker objects (for
-example when detecting default values).  Compare them using ``is`` as
+example when detecting default values). Compare them using ``is`` as
 recommended by PEP 8.
 
-.. note::
-    TODO This was recommended by Steve Alexander but hasn't been
-    officially approved for inclusion. Clarify its status.
 
 Interfaces
 ----------
@@ -259,13 +184,6 @@ All public interfaces should go into a file called ``interfaces.py``.
 than once. Interfaces that are likely to be implemented only once, like
 ``IGlobalAdapterService``, should live in the same module as their
 implementation.
-
-.. note::
-    TODO clarify whether the single/multiple implementation rule holds.
-
-    TODO there has been discussion about whether imperative or
-    present tense is to be preferred for describing interfaces. The
-    discussion was not resolved.
 
 
 .. _`PEP 8`: http://www.python.org/dev/peps/pep-0008/
