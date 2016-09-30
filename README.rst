@@ -16,3 +16,5 @@ dependencies) and can directly be used with a buildout by specifying the
 ``ztk-versions.cfg`` file via the ``extends`` mechanism.
 
 To test the ZTK, run ``bin/test-ztk``.
+
+More information is available at https://zopetoolkit.readthedocs.io/.
