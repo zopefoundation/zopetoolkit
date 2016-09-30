@@ -1,21 +1,35 @@
 Zope Toolkit
 ============
 
-The Zope Toolkit (ZTK) is a set of libraries intended for reuse by projects to
-develop web applications or web frameworks. It is developed by the
-contributors of the Zope Foundation.
+The Zope Toolkit (ZTK) is a set of libraries intended for reuse by
+projects to develop web applications or web frameworks. It is developed
+by the contributors of the Zope Foundation.
 
 The whole collection of ZTK libraries are used in various web
-frameworks and web application servers. Three of these are managed by
-the Zope project: BlueBream, Grok and Zope 2. If you install one of these
-systems, you will get a part of the ZTK along with it automatically.
+frameworks and web application servers, two examples of these are
+Grok and Zope. If you install one of these systems, you will get a
+part of the ZTK along with it automatically.
 
-The :ref:`release-team` is there to coordinate the release of new versions
-of the ZTK and make sure the interests of the three Zope projects are
-respected.
+Installation
+------------
 
-.. note::
-    The ZTK is not installable by itself directly, but its libraries are.
+The Zope Toolkit cannot be installed directly except as individual
+libraries (such as ``zope.component``). To install it you typically
+would install a framework or application that makes use of these
+libraries. Examples of such projects are Grok and Zope.
+
+If you want to use the Zope Toolkit Known-Good-Set (KGS), you should
+copy the ztk-versions.cfg file into your own project and include it
+in your buildout via the extends mechanism.
+
+Frameworks and applications have their own set of install instructions.
+You should follow these in most cases.
+
+Python versions
+---------------
+
+The ZTK supports Python 2.7, 3.3, 3.4 and 3.5.
+
 
 Documentation
 -------------
@@ -24,10 +38,6 @@ Documentation
    :maxdepth: 2
 
    about/index
-   releases/index
-   proposals/index
    process/index
    codingstyle/index
-   zope-dev/index
-   releaseteam/index
-   steeringgroup/index
+   attic/index
