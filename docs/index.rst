@@ -16,11 +16,13 @@ Installation
 The Zope Toolkit cannot be installed directly except as individual
 libraries (such as ``zope.component``). To install it you typically
 would install a framework or application that makes use of these
-libraries. Examples of such projects are Grok and Zope.
+libraries.
 
 If you want to use the Zope Toolkit Known-Good-Set (KGS), you should
-copy the ztk-versions.cfg file into your own project and include it
-in your buildout via the extends mechanism.
+copy the
+`ztk-versions.cfg <https://github.com/zopefoundation/zopetoolkit/blob/master/ztk-versions.cfg>`_
+file into your own project and include it in your buildout
+via the extends mechanism.
 
 Frameworks and applications have their own set of install instructions.
 You should follow these in most cases.
@@ -28,7 +30,7 @@ You should follow these in most cases.
 Python versions
 ---------------
 
-The ZTK supports Python 2.7, 3.3, 3.4 and 3.5.
+The ZTK supports CPython 2.7, 3.3, 3.4, 3.5 and PyPy.
 
 
 Documentation
@@ -37,7 +39,7 @@ Documentation
 .. toctree::
    :maxdepth: 2
 
-   about/index
+   about
    process/index
    codingstyle/index
    attic/index

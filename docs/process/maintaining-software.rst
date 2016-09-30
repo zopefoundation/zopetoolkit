@@ -26,8 +26,8 @@ and to serve as a canonical source for guidance when in doubt.
 Repository layout
 -----------------
 
-Here's an example of the directory naming conventions used in the Zope
-subversion repository at ``svn.zope.org``::
+Here's an example of naming conventions used in the Zope Github
+organization at ``github.com/zopefoundation``::
 
   zope.component/
   zope.component/branches/
@@ -39,13 +39,13 @@ subversion repository at ``svn.zope.org``::
   zope.component/tags/3.4.0b1
   zope.component/tags/3.4.1
   ...
-  zope.component/trunk/
+  zope.component/master/
   ...
 
 To summarize:
 
-* The top-level name of the directory is the project's name.  This is
-  the name of the Python distribution ("egg").  If it contains just
+* The Github project name is the project's name. This is also
+  the name of the Python distribution.  If it contains just
   one package, the dotted name of the package should be used for the
   project name, e.g. ``zope.component``, ``z3c.form``.  The same is
   true for Zope 2 "products", e.g. ``Products.Five`` (note that not
@@ -61,18 +61,9 @@ To summarize:
 
   * ``z3c`` (meaning "Zope 3 Community")
 
-  * your organization's name of an abbreviation of it, e.g. ``zc`` for
-    Zope Corporation, ``lovely`` for Lovely Systems, ``cc`` for
-    Creative Commons, etc.
-
   Sometimes the project doesn't hold just one package but a number of
   packages or not even software at all.  In this case pick a
   meaningful name that's unlikely to interfere with other names.
-
-* Below the top-level directory, we have the standard subversion
-  directory layout (``branches``, ``tags``, ``trunk``).  Please
-  refrain from using custom naming schemes, such as calling the trunk
-  ``sandbox`` or something similar.
 
 * Release branches and release tags should be simple dotted numbers
   stating the version that the branch or tag is for.  Use ``3.4``, not
@@ -91,29 +82,18 @@ To summarize:
   announced and distributed.
 
 
-Sandbox
--------
-
-For private experiments that don't yet meet the maturity expected from
-software in the Zope repository (see `Package documentation and
-metadata`_ below), it is recommended to use the private sandbox,
-``Sandbox/<login name>/``.  Software committed to this sandbox will
-still be subject to the Zope Contributor Agreement (as everything
-that's committed to the Zope repository).
-
-
 License
 -------
 
 Unless allowed otherwise, all software committed to the Zope
-repository is subject to the `Zope Public License (ZPL)`_.  The
+organization is subject to the `Zope Public License (ZPL)`_.  The
 documentation of the software should state so.  In addition, each
 source code file should contain the following license header at the
 top::
 
   ##############################################################################
   #
-  # Copyright (c) 2009 Zope Foundation and Contributors.
+  # Copyright (c) 2016 Zope Foundation and Contributors.
   # All Rights Reserved.
   #
   # This software is subject to the provisions of the Zope Public License,
@@ -160,73 +140,8 @@ broken code."
 
 Tests should be written in a fairly literate way with documentation of
 the test itself.  That is to ensure that the intent of each test is
-clear and obvious to any other developer.  One can use
-``unittest.TestCase`` as a test harness, or preferrably doctests_.
-
-We can differentiate two kinds of (doc)tests which should be separated
-from each other clearly:
-
-- **Executable documentation**
-
-  Since automated tests have to exercise every feature of the software
-  anyway, they might just as well serve as the software's
-  documentation.  Doctests_ work especially well for this kind of
-  tests because they contain documentation text and test code at the
-  same time.  Here's an example of executable documentation in doctest
-  format::
-
-    Defining interfaces
-    ===================
-
-    Interfaces are defined using Python class statements::
-
-      >>> import zope.interface
-      >>> class IFoo(zope.interface.Interface):
-      ...    """Foo blah blah"""
-      ...
-      ...    x = zope.interface.Attribute("""X blah blah""")
-      ...
-      ...    def bar(q, r=None):
-      ...        """bar blah blah"""
-
-    In the example above, we've created an interface, `IFoo`.  We
-    subclassed `zope.interface.Interface`, which is an ancestor interface for
-    all interfaces, much as `object` is an ancestor of all new-style
-    classes [#create]_.   The interface is not a class, it's an Interface,
-    an instance of `InterfaceClass`::
-
-      >>> type(IFoo)
-      <class 'zope.interface.interface.InterfaceClass'>
-
-    We can ask for the interface's documentation::
-
-      >>> IFoo.__doc__
-      'Foo blah blah'
-
-    and its name::
-
-      >>> IFoo.__name__
-      'IFoo'
-
-  As you can see, executable documentation is not just test code.
-  It's also a story which, just like all documentation, takes time and
-  effort to write.  It is recommended to use first person plural
-  ("we") or second person ("you") in the story to involve the reader.
-  It also helps outlining use cases for the software, especially when
-  tests are written *before* the implementation ("test-driven
-  development").
-
-  Doctests should be valid reStructuredText and preferrably placed in
-  text files rather than in docstrings.  The doctest files should be
-  named aptly so that developers can easily associate them with the
-  code in question, have the file extension ``.txt`` and are best
-  placed next to code in question.
-
-- **Other tests**, such as edge-case tests or bugfix tests.  They too
-  need to be documented, but they usually have little value for
-  anybody seeking documentation on the software in question.
-
-.. _doctests: http://docs.python.org/lib/module-doctest.html
+clear and obvious to any other developer.  One should use
+``unittest.TestCase`` as a test harness.
 
 
 Backward-compatibility
@@ -265,18 +180,13 @@ Package documentation and metadata
 It is recommended that all packages in the Zope repository are
 accompanied by at least the following minimum set of documentation and
 metadata (file names are relative to the package's distribution, in
-terms of a checkout they're relative to ``trunk`` or a release branch
+terms of a checkout they're relative to ``master`` or a release branch
 or tag):
 
-``README.txt``
+``README.rst``
     This file should give an overview over what the package or project
     is about.  It is acceptable for this to be just a few paragraphs
     or a full-fledged manual for the piece of software.
-
-    If ``README.txt`` contains a doctest that should be run as part of
-    the automated test suite, it usually needs to be placed inside the
-    Python package.  In this case, a small ``README.txt`` at the top
-    level should point readers to it.
 
     If the package has an associated mailinglist and a bugtracker, it
     is a good idea to mention it here.
@@ -284,8 +194,7 @@ or tag):
     This file should contain valid reStructuredText_.
 
     Here's an example for a short file containing only a few
-    paragraphs, but referring to more elaborate documentation
-    (doctests) inside the package::
+    paragraphs, but referring to a separate documentation site::
 
       Martian provides infrastructure for declarative configuration of
       Python code. Martian is especially useful for the construction of
@@ -302,11 +211,9 @@ or tag):
 
       For more information about using Martian, see:
 
-        src/martian/README.txt
-        src/martian/directive.txt
-        src/martian/scan.txt
+        martian.readthedocs.io
 
-``CHANGES.txt``
+``CHANGES.rst``
     This file contains the changelog.  The changelog should keep track
     of every new feature and every bugfix of all releases.  When a
     particular release has lots of changes, it may group them into
@@ -347,7 +254,7 @@ or tag):
 
       setup(
           name='z3c.awesomelib',
-          version='2.0.0dev',
+          version='2.0.0.dev',
           url='http://pypi.python.org/pypi/z3c.awesomelib',
           author='Philipp von Weitershausen',
           author_email='philipp@weitershausen.de',
@@ -358,9 +265,8 @@ or tag):
                        'Programming Language :: Python',
                        'Operating System :: OS Independent',
                        'Topic :: Internet :: WWW/HTTP',
-                       'Framework :: Zope3',
                        ],
-          description="An awesome website implementation for Zope 3",
+          description="An awesome website implementation.",
           long_description=long_description,
 
           packages=find_packages('src'),
@@ -376,43 +282,25 @@ or tag):
     * The blank line separates mostly informational metadata intended
       for users from packaging metadata intended for setuptools.
 
-    * Many packages don't have their own "homepage" on zope.org.  It
+    * Many packages don't have their own "homepage". It
       is often more convenient to use the `Python Package Index
       (PyPI)`_ as a homepage for the package (via the ``url``
       parameter) since PyPI renders ``long_description`` for the
       package's main page and provides downloads.
 
-      It is not recommended to point ``url`` to the subversion
-      repository as it is misleading to both people and setuptools
-      (both will use it to find more information about the package and
-      the subversion repository isn't very helpful).
-
     * The list of `Trove classifiers`_ (``classifiers`` parameter)
       should be adjusted according to the specific package, of course.
       Much of the software in the Zope repository is intended to be
-      used with the Zope 2 or Zope Toolkit (sometimes for both), we
+      used with Zope 2 or the Zope Toolkit (sometimes for both), we
       aim to make more and more software available for independent use
       (well-known examples are ``zope.interface`` or the ``ZODB``).
 
     * ``description`` should be a one-sentence description of the
       package while ``long_description`` is best taken from the
-      ``README.txt`` file as demonstrated.  You may also include the
-      changelog in ``long_description`` by concatenating ``README.txt
-      and ``CHANGES.txt``.
+      ``README.rst`` file as demonstrated.  You may also include the
+      changelog in ``long_description`` by concatenating ``README.rst
+      and ``CHANGES.rst``.
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Python Package Index (PyPI): http://pypi.python.org/pypi
 .. _Trove classifiers: http://pypi.python.org/pypi?%3Aaction=list_classifiers
-
-
-Missing subjects
-----------------
-
-This guide does not yet address, but probably should address
-
-* version numbering schemes (feature vs. bugfix releases),
-
-* which changes constitute new features (do new dependencies consist
-  of new features?),
-
-* how to deal with package dependencies.

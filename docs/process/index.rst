@@ -16,9 +16,5 @@ developing Zope Toolkit components.
     bug-tracking
     buildbots
     releasing-software
-    proposals
     maintaining-software
-    repository
     communication
-    old-references
-    winbotsetup
