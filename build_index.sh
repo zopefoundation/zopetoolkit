@@ -19,3 +19,7 @@ for tag in $(git tag -l "1*" | grep -v dev- | sort -r); do
     git show $tag:zopeapp-versions.cfg > releases/$tag/zopeapp-versions.cfg
     printf "## $tag\n\n- [ztk-versions.cfg](releases/$tag/ztk-versions.cfg)\n- [zopeapp-versions.cfg](releases/$tag/zopeapp-versions.cfg)\n\n" >> README.md;
 done
+
+# Add a footer
+printf "\n_____\n\n" >> README.md
+printf "[How to maintain this page](HOWTO.md)\n" >> README.md

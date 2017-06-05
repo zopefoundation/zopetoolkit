@@ -123,3 +123,7 @@
 - [ztk-versions.cfg](releases/1.0/ztk-versions.cfg)
 - [zopeapp-versions.cfg](releases/1.0/zopeapp-versions.cfg)
 
+
+_____
+
+[How to maintain this page](HOWTO.md)
