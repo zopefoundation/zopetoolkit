@@ -5,9 +5,8 @@ printf "# zopetoolkit Releases\n\n" > README.md
 rm -rf releases
 # 2.x releases have no 'zopeapp-versions.cfg'
 
-for tag in $(git tag -l "2*" | sort -r); do
+for tag in "master" $(git tag -l "2*" | sort -r); do
     echo $tag
-    git show $tag:ztk-versions.cfg > releases/$tag/ztk-versions.cfg
     mkdir -p releases/$tag
     git show $tag:ztk-versions.cfg > releases/$tag/ztk-versions.cfg
     printf "## $tag\n\n- [ztk-versions.cfg](releases/$tag/ztk-versions.cfg)\n\n" >> README.md;

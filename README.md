@@ -1,5 +1,9 @@
 # zopetoolkit Releases
 
+## master
+
+- [ztk-versions.cfg](releases/master/ztk-versions.cfg)
+
 ## 2.0a1
 
 - [ztk-versions.cfg](releases/2.0a1/ztk-versions.cfg)
