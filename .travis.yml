@@ -7,7 +7,8 @@ python:
     - 3.6
     - pypy
 install:
-    - pip install -U setuptools==33.1.1
+    - pip install -U setuptools==$(awk '$1 == "setuptools" {print $3}' ztk-versions.cfg)
+    - pip install -U six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg)
     - python bootstrap.py
     - bin/buildout -n
 script:
