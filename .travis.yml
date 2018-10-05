@@ -5,9 +5,13 @@ python:
     - 3.4
     - 3.5
     - 3.6
-    - 3.7-dev
     - pypy
     - pypy3
+matrix:
+    include:
+        - python: "3.7"
+          dist: xenial
+          sudo: true
 install:
     - pip install -U setuptools==$(awk '$1 == "setuptools" {print $3}' ztk-versions.cfg)
     - pip install -U six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg)
