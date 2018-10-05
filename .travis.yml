@@ -16,7 +16,8 @@ install:
 script:
     - bin/test-ztk
 notifications:
-    email: false
+    email:
+        - mh@gocept.com
 cache:
   pip: true
   directories:
