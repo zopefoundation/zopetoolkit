@@ -11,8 +11,6 @@ matrix:
           dist: xenial
         - python: "3.8-dev"
           dist: xenial
-allow_failures:
-    - python: "3.8-dev"
 install:
     - pip install -U setuptools==$(awk '$1 == "setuptools" {print $3}' ztk-versions.cfg)
     - pip install -U six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg)
