@@ -9,7 +9,7 @@ matrix:
     include:
         - python: "3.7"
           dist: xenial
-        - python: "3.8-dev"
+        - python: "3.8"
           dist: xenial
 install:
     - pip install -U setuptools==$(awk '$1 == "setuptools" {print $3}' ztk-versions.cfg)
