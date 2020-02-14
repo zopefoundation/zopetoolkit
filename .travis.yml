@@ -1,19 +1,20 @@
 language: python
 python:
-    - 2.7
     - 3.5
     - 3.6
     - 3.7
     - 3.8
-    - pypy
     - pypy3
 matrix:
     include:
         - python: 2.7
-        - before_install:
-            - pip install -U setuptools==44.0.0
+            - before_install:
+                - pip install -U setuptools==44.0.0
+        - python: pypy
+            - before_install:
+                - pip install -U setuptools==44.0.0
 before_install:
-    - pip install -U setuptools==$(awk '$1 == "setuptools" {print $3}' ztk-versions.cfg)
+    - pip install -U setuptools
 install:
     - pip install -U six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg)
     - python bootstrap.py
