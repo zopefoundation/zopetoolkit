@@ -7,8 +7,14 @@ python:
     - 3.8
     - pypy
     - pypy3
-install:
+matrix:
+    include:
+        - python: 2.7
+        - before_install:
+            - pip install -U setuptools==44.0.0
+before_install:
     - pip install -U setuptools==$(awk '$1 == "setuptools" {print $3}' ztk-versions.cfg)
+install:
     - pip install -U six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg)
     - python bootstrap.py
     - bin/buildout -n
