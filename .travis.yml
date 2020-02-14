@@ -6,13 +6,13 @@ python:
     - 3.8
     - pypy3
 matrix:
-    include:
-        - python: 2.7
-            - before_install:
-                - pip install -U setuptools==44.0.0
-        - python: pypy
-            - before_install:
-                - pip install -U setuptools==44.0.0
+  include:
+    - python: 2.7
+      before_install:
+        - pip install -U setuptools==44.0.0
+    - python: pypy
+      before_install:
+        - pip install -U setuptools==44.0.0
 before_install:
     - pip install -U setuptools
 install:
