@@ -18,7 +18,7 @@ before_install:
     - pip install -U setuptools
 install:
     - pip install -U six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg)
-    - pip install -U zc.buildout==$(awk '$1 == "zc.buildout" {print $3}' ztk-versions.cfg)
+    - pip install zc.buildout==$(awk '$1 == "zc.buildout" {print $3}' ztk-versions.cfg)
     - buildout -n
 script:
     - bin/test-ztk
