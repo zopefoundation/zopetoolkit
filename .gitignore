@@ -4,6 +4,7 @@
 __pycache__
 .installed.cfg
 .mr.developer.cfg
+.tox/
 build/
 bin/
 develop-eggs/

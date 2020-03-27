@@ -22,6 +22,7 @@ Also, specific versions have been tested together (including their
 dependencies) and can directly be used with a buildout by specifying the
 ``ztk-versions.cfg`` file via the ``extends`` mechanism.
 
-To test the ZTK, run ``bin/test-ztk``.
+To test the ZTK, run ``bin/test-ztk`` or ``tox`` for all supported Python
+versions.
 
 More information is available at https://zopetoolkit.readthedocs.io/.
