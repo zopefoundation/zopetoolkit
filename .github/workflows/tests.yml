@@ -1,0 +1,55 @@
+# Generated from:
+# https://github.com/zopefoundation/meta/tree/master/config/pure-python
+name: tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        config:
+        # [Python version, extra dependencies]
+        - ["2.7",      "setuptools==44.0.0"]
+        - ["3.6",      "setuptools"]
+        - ["3.7",      "setuptools"]
+        - ["3.8",      "setuptools"]
+        - ["3.9",      "setuptools"]
+        - ["pypy-2.7", "setuptools==44.0.0"]
+        # Temporarily disabled because
+        # https://foss.heptapod.net/pypy/pypy/-/issues/3378 breaks
+        # zope.password
+        # - ["pypy-3.6", "setuptools"]
+
+    runs-on: ubuntu-latest
+    name: ${{ matrix.config[0] }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.config[0] }}
+    - name: Install library dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libxml2-dev libxslt1-dev
+    - name: Cache Python wheels and eggs
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.cache/pip
+          eggs
+        key: ${{ runner.os }}-py-${{ matrix.config[0] }}-${{ hashFiles('setup.*', 'buildout.cfg') }}
+        restore-keys: |
+          ${{ runner.os }}-py-${{ matrix.config[0] }}-
+          ${{ runner.os }}-py-
+    - name: Install dependencies
+      run: |
+        python -m pip install -U pip
+        pip install -U ${{ matrix.config[1] }} wheel six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg) zc.buildout==$(awk '$1 == "zc.buildout" {print $3}' ztk-versions.cfg) tox
+        buildout -n
+    - name: Test
+      run: bin/test-ztk
