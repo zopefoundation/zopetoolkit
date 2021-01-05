@@ -19,10 +19,7 @@ jobs:
         - ["3.8",      "setuptools"]
         - ["3.9",      "setuptools"]
         - ["pypy-2.7", "setuptools==44.0.0"]
-        # Temporarily disabled because
-        # https://foss.heptapod.net/pypy/pypy/-/issues/3378 breaks
-        # zope.password
-        # - ["pypy-3.6", "setuptools"]
+        - ["pypy-3.6", "setuptools"]
 
     runs-on: ubuntu-latest
     name: ${{ matrix.config[0] }}
@@ -53,3 +50,6 @@ jobs:
         buildout -n
     - name: Test
       run: bin/test-ztk
+      # https://foss.heptapod.net/pypy/pypy/-/issues/3378 breaks zope.password
+      # on PyPy3, so ignore failures there for now.
+      continue-on-error: ${{ matrix.config[0] == 'pypy-3.6' }}
