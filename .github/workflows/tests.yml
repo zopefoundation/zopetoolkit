@@ -39,7 +39,7 @@ jobs:
         path: |
           ~/.cache/pip
           eggs
-        key: ${{ runner.os }}-py-${{ matrix.config[0] }}-${{ hashFiles('setup.*', 'buildout.cfg') }}
+        key: ${{ runner.os }}-py-${{ matrix.config[0] }}-${{ hashFiles('buildout.cfg') }}
         restore-keys: |
           ${{ runner.os }}-py-${{ matrix.config[0] }}-
           ${{ runner.os }}-py-
