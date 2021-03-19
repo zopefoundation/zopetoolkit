@@ -14,12 +14,12 @@ jobs:
         config:
         # [Python version, extra dependencies]
         - ["2.7",      "setuptools==44.0.0"]
-        - ["3.6",      "setuptools"]
-        - ["3.7",      "setuptools"]
-        - ["3.8",      "setuptools"]
-        - ["3.9",      "setuptools"]
+        - ["3.6",      "setuptools < 52"]
+        - ["3.7",      "setuptools < 52"]
+        - ["3.8",      "setuptools < 52"]
+        - ["3.9",      "setuptools < 52"]
         - ["pypy-2.7", "setuptools==44.0.0"]
-        - ["pypy-3.6", "setuptools"]
+        - ["pypy-3.6", "setuptools < 52"]
 
     runs-on: ubuntu-latest
     name: ${{ matrix.config[0] }}
