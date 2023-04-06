@@ -4,12 +4,17 @@ name: tests
 
 on:
   push:
-    branches: [ master ]
   pull_request:
+  schedule:
+    - cron: '0 12 * * 0'  # run once a week on Sunday
+  # Allow to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
     strategy:
+      # We want to see all failures:
+      fail-fast: false
       matrix:
         config:
         # [Python version, extra dependencies]
@@ -23,9 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     name: ${{ matrix.config[0] }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.config[0] }}
     - name: Install library dependencies
@@ -33,7 +38,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install libxml2-dev libxslt1-dev
     - name: Cache Python wheels and eggs
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: |
           ~/.cache/pip
@@ -45,7 +50,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install -U pip
-        pip install -U ${{ matrix.config[1] }} wheel six==$(awk '$1 == "six" {print $3}' ztk-versions.cfg) zc.buildout==$(awk '$1 == "zc.buildout" {print $3}' ztk-versions.cfg) tox
+        pip install -U ${{ matrix.config[1] }} wheel zc.buildout==$(awk '$1 == "zc.buildout" {print $3}' ztk-versions.cfg) tox
         buildout -n
     - name: Test
       run: bin/test-ztk
