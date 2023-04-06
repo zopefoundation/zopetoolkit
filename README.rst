@@ -1,8 +1,8 @@
 The Zope Toolkit
 ================
 
-.. image:: https://travis-ci.com/zopefoundation/zopetoolkit.svg?branch=master
-        :target: https://travis-ci.com/zopefoundation/zopetoolkit
+.. image:: https://github.com/zopefoundation/zopetoolkit/actions/workflows/tests.yml/badge.svg
+        :target: https://github.com/zopefoundation/zopetoolkit/actions/workflows/tests.yml
 
 .. image:: https://readthedocs.org/projects/zopetoolkit/badge/?version=latest
         :target: http://zopetoolkit.readthedocs.io/en/latest/
