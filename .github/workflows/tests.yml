@@ -13,13 +13,12 @@ jobs:
       matrix:
         config:
         # [Python version, extra dependencies]
-        - ["2.7",      "setuptools==44.0.0"]
-        - ["3.6",      "'setuptools < 52'"]
-        - ["3.7",      "'setuptools < 52'"]
-        - ["3.8",      "'setuptools < 52'"]
-        - ["3.9",      "'setuptools < 52'"]
-        - ["pypy-2.7", "setuptools==44.0.0"]
-        - ["pypy-3.6", "'setuptools < 52'"]
+        - ["3.7",      ""]
+        - ["3.8",      ""]
+        - ["3.9",      ""]
+        - ["3.10",     ""]
+        - ["3.11",     ""]
+        - ["pypy-3.9", ""]
 
     runs-on: ubuntu-latest
     name: ${{ matrix.config[0] }}
@@ -50,6 +49,3 @@ jobs:
         buildout -n
     - name: Test
       run: bin/test-ztk
-      # https://foss.heptapod.net/pypy/pypy/-/issues/3378 breaks zope.password
-      # on PyPy3, so ignore failures there for now.
-      continue-on-error: ${{ matrix.config[0] == 'pypy-3.6' }}

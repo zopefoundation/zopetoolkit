@@ -11,8 +11,7 @@ The Zope Toolkit
 The Zope Toolkit is a set of libraries maintained by the Zope project for
 building web applications, web frameworks and application servers.
 
-It supports Python 2.7, 3.6 up to 3.8 as well as PyPy 2 and 3.
-It is additionally tested on the latest pre-release of Python 3.9.
+It supports Python 3.7 up to 3.1 as well as PyPy 3.
 
 This directory contains the definition of the Zope Toolkit in the file
 ``ztk.cfg``. It specifies the list of packages included in the ZTK and
