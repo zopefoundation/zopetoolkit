@@ -12,3 +12,4 @@ developing Zope Toolkit components.
     releasing-software
     maintaining-software
     communication
+    updating-ztk
