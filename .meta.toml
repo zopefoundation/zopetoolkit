@@ -1,0 +1,22 @@
+# Generated from:
+# https://github.com/zopefoundation/meta/tree/master/config/toolkit
+[meta]
+template = "toolkit"
+commit-id = "faabd7e5"
+
+[python]
+with-sphinx-doctests = false
+with-docs = true
+with-future-python = false
+with-pypy = true
+with-macos = false
+with-windows = false
+
+[tox]
+use-flake8 = true
+testenv-commands = [
+    "{envdir}/bin/test-ztk {posargs:-cv}",
+    ]
+
+[coverage]
+fail-under = "not applicable"
