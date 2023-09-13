@@ -1,10 +1,10 @@
-from docutils import nodes
-from docutils.parsers.rst import Directive
 import json
-
-import urllib
 import socket
 import threading
+import urllib
+
+from docutils import nodes
+from docutils.parsers.rst import Directive
 
 
 def setup(app):
@@ -43,11 +43,11 @@ def process_buildbot_nodes(app, doctree, fromdocname):
             url = parse_builder_url(node.buildbot_url)
             by_url.setdefault(url, []).append(node)
         jobs = []
-        for url, nodes in by_url.items():
-            if not nodes:
+        for url, nodes_ in by_url.items():
+            if not nodes_:
                 continue
             thread = threading.Thread(target=update_buildbot_nodes,
-                                      args=(url, nodes),
+                                      args=(url, nodes_),
                                       name='%s' % (url,))
             thread.start()
             jobs.append(thread)
@@ -97,12 +97,13 @@ def get_buildbot_result(json_url):
     except Exception as e:
         return e
 
+
 class BuildbotColor(nodes.Inline, nodes.TextElement):
     pass
 
 
 def visit_buildbot_node(self, node):
-    kwargs = {'href' : node.buildbot_url}
+    kwargs = {'href': node.buildbot_url}
     css_class = getattr(node, 'css_class', '')
     if css_class:
         kwargs['class'] = css_class
@@ -115,4 +116,3 @@ def visit_buildbot_node(self, node):
 
 def depart_buildbot_node(self, node):
     self.body.append('</a>')
-
