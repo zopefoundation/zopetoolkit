@@ -18,12 +18,12 @@ jobs:
       matrix:
         config:
         # [Python version, extra dependencies]
-        - ["3.7",      ""]
-        - ["3.8",      ""]
-        - ["3.9",      ""]
-        - ["3.10",     ""]
-        - ["3.11",     ""]
-        - ["pypy-3.9", ""]
+        - ["3.7",      "py37"]
+        - ["3.8",      "py3"]
+        - ["3.9",      "py39"]
+        - ["3.10",     "py310"]
+        - ["3.11",     "py311"]
+        - ["pypy-3.9", "pypy3"]
 
     runs-on: ubuntu-latest
     name: ${{ matrix.config[0] }}
@@ -50,7 +50,5 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install -U pip
-        pip install -U ${{ matrix.config[1] }} wheel zc.buildout==$(awk '$1 == "zc.buildout" {print $3}' ztk-versions.cfg) tox
-        buildout -n
     - name: Test
-      run: bin/test-ztk
+      run: tox -e ${{ matrix.config[1] }}
