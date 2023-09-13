@@ -49,6 +49,6 @@ jobs:
           ${{ runner.os }}-py-
     - name: Install dependencies
       run: |
-        python -m pip install -U pip
+        python -m pip install -U pip tox
     - name: Test
       run: tox -e ${{ matrix.config[1] }}
