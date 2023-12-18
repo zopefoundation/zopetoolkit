@@ -41,5 +41,6 @@ Documentation
 
    about
    process/index
+   releases/index
    codingstyle/index
    attic/index

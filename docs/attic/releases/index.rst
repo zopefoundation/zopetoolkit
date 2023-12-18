@@ -1,8 +1,7 @@
-.. This file is generated. Please do not edit manually or check in.
+.. _old-releases:
 
-
-Releases
-========
+Old releases
+============
 
 This area collects release-specific information about the toolkit including a
 list of backward-incompatible changes, new techniques developed, and libraries

@@ -1,0 +1,21 @@
+2.0 (2023-12-18)
+================
+
+Breaking changes
+----------------
+
+* Drop support for Python 2.7.
+
+* Add support for Python 3.7, 3.8, 3.9, 3.10, 3.11.
+
+Features
+--------
+
+* Update dependencies to newest versions. Some of them even support Python
+  3.12.
+
+Bugfixes
+--------
+
+* There are way too many to list them here separately. See the change logs of
+  the individual packages.
