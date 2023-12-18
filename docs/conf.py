@@ -292,7 +292,7 @@ texinfo_documents = [
 epub_title = u'zopetoolkit'
 epub_author = u'Zope Foundation and Contributors'
 epub_publisher = u'Zope Foundation and Contributors'
-epub_copyright = u'2015, Zope Foundation and Contributors'
+epub_copyright = u'2015-2023, Zope Foundation and Contributors'
 
 # The basename for the epub file. It defaults to the project name.
 # epub_basename = u'zopetoolkit'
