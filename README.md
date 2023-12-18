@@ -8,6 +8,10 @@
 
 - [ztk-versions.cfg](releases/2.0a1/ztk-versions.cfg)
 
+## 2.0
+
+- [ztk-versions.cfg](releases/2.0/ztk-versions.cfg)
+
 ## 1.1c1
 
 - [ztk-versions.cfg](releases/1.1c1/ztk-versions.cfg)
