@@ -1,6 +1,9 @@
 2.0 (2023-12-18)
 ================
 
+Please find the buildout versions file at
+https://zopefoundation.github.io/zopetoolkit/.
+
 Breaking changes
 ----------------
 
