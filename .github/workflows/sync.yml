@@ -1,0 +1,36 @@
+name: Sync Requirements
+
+on:
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  sync:
+    strategy:
+      matrix:
+        python-version: [3.11]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.COMMIT_ACTIONS_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install vereqsyn
+      - name: Syncing ztk-versions.cfg with requirements.txt
+        run: |
+          vereqsyn ztk-versions.cfg dependabot/requirements.txt
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+          message: Version synchronization
+          add: '["ztk-versions.cfg", "dependabot/requirements.txt"]'
