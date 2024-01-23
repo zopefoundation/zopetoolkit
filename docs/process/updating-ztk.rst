@@ -4,6 +4,9 @@ Updating the ZTK itself
 Updating versions of dependencies
 ---------------------------------
 
+Manual way
+++++++++++
+
 To get new version pins into ZTK run the following steps:
 
 * ``tox -e checkversions | grep "="``
@@ -15,6 +18,15 @@ To get new version pins into ZTK run the following steps:
 * Run the ``checkversion`` call from above again to make sure all possible
   versions are updated.
 * If the test runs are successful: create a pull request on GitHub.
+
+Automated way
++++++++++++++
+
+* There is a dependabot configuration automatically updating
+  ``dependabot/requirements.txt``.
+
+* And there is a GitHub actions job syncing between
+  ``dependabot/requirements.txt`` and ``ztk-versions.cfg``.
 
 Creating a release
 ------------------

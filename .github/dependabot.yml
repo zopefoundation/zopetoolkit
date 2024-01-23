@@ -1,0 +1,20 @@
+---
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    pull-request-branch-name:
+      separator: "-"
+    labels:
+      - github_actions
+  - package-ecosystem: pip
+    directory: dependabot/
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    pull-request-branch-name:
+      separator: "-"
+    labels:
+      - dependencies
