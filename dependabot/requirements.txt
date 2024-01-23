@@ -77,7 +77,7 @@ transaction==4.0
 zc.lockfile==3.0.post1
 zodbpickle==3.1
 six==1.16.0
-coverage==7.3.3
+coverage==7.4.0
 manuel==1.12.4
 mr.developer==2.0.1
 z3c.checkversions==2.1
