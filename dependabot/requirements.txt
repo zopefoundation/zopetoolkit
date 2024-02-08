@@ -35,9 +35,9 @@ zope.keyreference==6.0
 zope.lifecycleevent==5.0
 zope.location==5.0
 zope.login==3.0
-zope.mimetype==3.0
+zope.mimetype==3.1
 zope.minmax==2.3
-zope.pagetemplate==5.0
+zope.pagetemplate==5.1
 zope.password==4.4
 zope.pluggableauth==3.0
 zope.principalannotation==5.0
@@ -50,7 +50,7 @@ zope.ramcache==3.0
 zope.schema==7.0.1
 zope.security==6.2
 zope.securitypolicy==5.0
-zope.sendmail==6.0
+zope.sendmail==6.1
 zope.session==5.1
 zope.site==5.0
 zope.size==5.0
@@ -58,11 +58,11 @@ zope.structuredtext==5.0
 zope.tal==5.0.1
 zope.tales==6.0
 zope.testing==5.0.1
-zope.testrunner==6.2.1
+zope.testrunner==6.3
 zope.traversing==5.0
 zope.untrustedpython==6.0
 zope.viewlet==5.0
-BTrees==5.1
+BTrees==5.2
 RestrictedPython==7.0
 ZConfig==4.0
 ZODB==5.8.1
