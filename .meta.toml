@@ -2,7 +2,7 @@
 # https://github.com/zopefoundation/meta/tree/master/config/toolkit
 [meta]
 template = "toolkit"
-commit-id = "47bae5a7"
+commit-id = "17113b94"
 
 [python]
 with-sphinx-doctests = false
@@ -28,3 +28,12 @@ testenv-additional = [
 
 [coverage]
 fail-under = "not applicable"
+
+[check-manifest]
+additional-ignores = [
+    "dependabot/*",
+    "docs/_build/html/*",
+    "docs/_build/html/*/*",
+    "docs/_build/html/*/*/*",
+    "docs/_build/html/*/*/*/*",
+    ]
