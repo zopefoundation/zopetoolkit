@@ -62,7 +62,7 @@ zope.testrunner==6.2.1
 zope.traversing==5.0
 zope.untrustedpython==6.0
 zope.viewlet==5.0
-BTrees==5.1
+BTrees==5.2
 RestrictedPython==7.0
 ZConfig==4.0
 ZODB==5.8.1
