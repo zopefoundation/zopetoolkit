@@ -43,7 +43,7 @@ zope.pluggableauth==3.0
 zope.principalannotation==5.0
 zope.principalregistry==5.0
 zope.processlifetime==3.0
-zope.proxy==5.1
+zope.proxy==5.2
 zope.ptresource==5.0
 zope.publisher==7.0
 zope.ramcache==3.0
