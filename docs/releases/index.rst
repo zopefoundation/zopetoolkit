@@ -9,3 +9,4 @@ The old releases are in :ref:`old-releases`.
    :maxdepth: 1
 
    2.0.rst
+   2.1.rst

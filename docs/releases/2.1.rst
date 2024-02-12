@@ -1,0 +1,12 @@
+2.1 (2024-02-12)
+================
+
+Please find the buildout versions file at
+https://zopefoundation.github.io/zopetoolkit/.
+
+Features
+--------
+
+* Add support for Python 3.12.
+
+* Update dependencies to their newest versions.
