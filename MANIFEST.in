@@ -1,0 +1,17 @@
+include *.md
+include *.txt
+include *.yaml
+include *.yml
+include buildout.cfg
+include development.cfg
+include tox.ini
+include ztk-sources.cfg
+include ztk-versions.cfg
+include ztk.cfg
+recursive-include docs *.bat
+recursive-include docs *.css
+recursive-include docs *.png
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs *.txt
+recursive-include docs Makefile
