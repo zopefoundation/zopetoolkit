@@ -18,3 +18,7 @@ updates:
       separator: "-"
     labels:
       - dependencies
+    groups:
+      all:
+        patterns:
+          - "*"
