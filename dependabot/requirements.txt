@@ -50,7 +50,7 @@ zope.ramcache==3.0
 zope.schema==7.0.1
 zope.security==6.2
 zope.securitypolicy==5.0
-zope.sendmail==6.1
+zope.sendmail==6.2
 zope.session==5.1
 zope.site==5.0
 zope.size==5.0
