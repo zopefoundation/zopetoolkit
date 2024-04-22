@@ -75,7 +75,7 @@ python-gettext==5.0
 pytz==2024.1
 transaction==4.0
 zc.lockfile==3.0.post1
-zodbpickle==3.2
+zodbpickle==3.3
 six==1.16.0
 coverage==7.4.4
 manuel==1.12.4
