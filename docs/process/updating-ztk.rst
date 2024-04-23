@@ -51,6 +51,7 @@ Creating a release
 * Run ``build_indexes.sh``, add and commit the changes.
 * Push the changes to GitHub, after some minutes the changes should appear at
   https://zopefoundation.github.io/zopetoolkit/.
+* Create a new release on https://github.com/zopefoundation/zopetoolkit/releases
 
 Setup for Dependabot auto-update
 ================================
