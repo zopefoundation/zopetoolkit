@@ -1,0 +1,10 @@
+2.2 (2024-04-23)
+================
+
+Please find the buildout versions file at
+https://zopefoundation.github.io/zopetoolkit/.
+
+Features
+--------
+
+* Update dependencies to their newest versions.
