@@ -11,7 +11,7 @@ zope.component==6.0
 zope.componentvocabulary==2.3.0
 zope.configuration==5.0.1
 zope.container==6.0
-zope.contentprovider==5.0
+zope.contentprovider==6.0
 zope.contenttype==5.1
 zope.copy==4.3
 zope.copypastemove==5.0
@@ -22,7 +22,7 @@ zope.dottedname==6.0
 zope.dublincore==5.0
 zope.error==5.0
 zope.event==5.0
-zope.exceptions==5.0.1
+zope.exceptions==5.1
 zope.filerepresentation==6.0
 zope.formlib==6.0
 zope.hookable==6.0
