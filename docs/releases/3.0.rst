@@ -1,0 +1,15 @@
+3.0 (2024-08-22)
+================
+
+Please find the buildout versions file at
+https://zopefoundation.github.io/zopetoolkit/.
+
+Backward incompatible changes
+-----------------------------
+
+* Drop support for Python 3.7.
+
+Features
+--------
+
+* Update dependencies to their newest versions.
