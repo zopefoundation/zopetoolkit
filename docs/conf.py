@@ -378,9 +378,9 @@ SUBPACKAGES = [
 
 
 def _sub_url(pkg):
-    path = '{}/src/zope.{}/docs/_build/html'.format(WHERE, pkg)
+    path = f'{WHERE}/src/zope.{pkg}/docs/_build/html'
     if os.path.exists(path):
-        return 'file://{}/src/zope.{}/docs/_build/html'.format(WHERE, pkg)
+        return f'file://{WHERE}/src/zope.{pkg}/docs/_build/html'
     # Not until docs.zope.org gets updated with objects.inv
     # return 'http://docs.zope.org/zope.%s' % pkg
 
