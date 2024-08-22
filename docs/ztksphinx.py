@@ -48,7 +48,7 @@ def process_buildbot_nodes(app, doctree, fromdocname):
                 continue
             thread = threading.Thread(target=update_buildbot_nodes,
                                       args=(url, nodes_),
-                                      name='%s' % (url,))
+                                      name=f'{url}')
             thread.start()
             jobs.append(thread)
         for thread in jobs:
@@ -75,7 +75,7 @@ def update_buildbot_nodes(url, nodes):
     for node in nodes:
         if isinstance(result, Exception):
             node.css_class = 'tests_could_not_determine'
-            node.title = '%s: %s' % (result.__class__.__name__, result)
+            node.title = f'{result.__class__.__name__}: {result}'
         elif result:
             node.css_class = 'tests_passed'
         else:
@@ -93,7 +93,7 @@ def get_buildbot_result(json_url):
     try:
         data = json.load(urllib.urlopen(json_url + '/builds/-1'))
         print(data['text'])
-        return u'successful' in data['text']
+        return 'successful' in data['text']
     except Exception as e:
         return e
 

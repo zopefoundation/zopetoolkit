@@ -2,7 +2,7 @@
 # https://github.com/zopefoundation/meta/tree/master/config/toolkit
 [meta]
 template = "toolkit"
-commit-id = "2247fc22"
+commit-id = "e6c3a241"
 
 [python]
 with-sphinx-doctests = false
