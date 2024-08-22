@@ -34,8 +34,7 @@ Creating a release
 * Make sure all tests are running successfully.
 * Decide on a version number for the new release, taking https://semver.org/
   into account. (Please note: dropping support for a Python version is
-  considered a major change as it enforces changes for users of ZTK who are
-  using the no longer supported Python version.)
+  **no longer** considered a major change, as it is the usual way of life.)
 * Create a change log page in ``docs/releases`` with the name of your release
   number and describe the most important changes in the new release.
 
@@ -49,6 +48,9 @@ Creating a release
 * Push your changes, make sure also the tag is pushed.
 * Switch to the branch ``gh-pages``.
 * Run ``build_indexes.sh``, add and commit the changes.
+
+  * If you created a new major release, you need to update
+    ``build_indexes.sh``, so it can find it.
 * Push the changes to GitHub, after some minutes the changes should appear at
   https://zopefoundation.github.io/zopetoolkit/.
 * Create a new release on https://github.com/zopefoundation/zopetoolkit/releases
