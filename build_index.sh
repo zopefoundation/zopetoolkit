@@ -5,7 +5,7 @@ printf "# zopetoolkit Releases\n\n" > README.md
 rm -rf releases
 # 2.x releases have no 'zopeapp-versions.cfg' + omit 2.0a1 release
 
-for tag in "master" $(git tag -l "2*" | sort -r | grep -v "2.0a1"); do
+for tag in "master" $(git tag -l "[23]*" | sort -r | grep -v "2.0a1"); do
     echo $tag
     mkdir -p releases/$tag
     git show $tag:ztk-versions.cfg > releases/$tag/ztk-versions.cfg
