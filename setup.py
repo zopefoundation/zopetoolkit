@@ -1,5 +1,6 @@
 from setuptools import setup
 
+
 version = '3.0.dev0'
 
 with open('README.rst') as f:
