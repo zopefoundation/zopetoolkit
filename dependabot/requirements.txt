@@ -63,7 +63,7 @@ zope.traversing==5.0
 zope.untrustedpython==6.1
 zope.viewlet==5.0
 BTrees==6.1
-RestrictedPython==7.2
+RestrictedPython==7.3
 ZConfig==4.1
 ZODB==6.0
 bcrypt==4.2.0
@@ -84,4 +84,4 @@ mr.developer==2.0.2
 z3c.checkversions==2.1
 z3c.recipe.compattest==2.0
 zc.recipe.egg==2.0.7
-zc.recipe.testrunner==3.0
+zc.recipe.testrunner==3.1
