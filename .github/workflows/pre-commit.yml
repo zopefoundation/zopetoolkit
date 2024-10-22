@@ -27,7 +27,7 @@ jobs:
         extra_args: --all-files --show-diff-on-failure
       env:
         PRE_COMMIT_COLOR: always
-    - uses: pre-commit-ci/lite-action@v1.0.3
+    - uses: pre-commit-ci/lite-action@v1.0.2
       if: always()
       with:
         msg: Apply pre-commit code formatting
