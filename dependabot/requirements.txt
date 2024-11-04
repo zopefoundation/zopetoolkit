@@ -22,7 +22,7 @@ zope.dottedname==6.0
 zope.dublincore==5.0
 zope.error==5.0
 zope.event==5.0
-zope.exceptions==5.1
+zope.exceptions==5.2
 zope.filerepresentation==6.0
 zope.formlib==6.0
 zope.hookable==7.0
