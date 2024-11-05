@@ -30,7 +30,7 @@ You should follow these in most cases.
 Python versions
 ---------------
 
-The ZTK supports CPython 3.7, 3.8, 3.9, 3.10, 3.11, 3.12 and PyPy3.
+The ZTK supports CPython 3.8, 3.9, 3.10, 3.11, 3.12, 3.13 and PyPy3.
 
 
 Documentation
