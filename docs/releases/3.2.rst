@@ -1,0 +1,12 @@
+3.2 (2025-02-21)
+================
+
+Please find the buildout versions file at
+https://zopefoundation.github.io/zopetoolkit/.
+
+
+Features
+--------
+
+* Drop support for Python 3.8.
+* Update dependencies to their newest versions.

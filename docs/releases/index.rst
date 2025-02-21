@@ -8,6 +8,7 @@ The old releases are in :ref:`old-releases`.
 .. toctree::
    :maxdepth: 1
 
+   3.2.rst
    3.1.rst
    3.0.rst
    2.2.rst
