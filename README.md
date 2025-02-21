@@ -4,6 +4,10 @@
 
 - [ztk-versions.cfg](releases/master/ztk-versions.cfg)
 
+## 3.2
+
+- [ztk-versions.cfg](releases/3.2/ztk-versions.cfg)
+
 ## 3.1
 
 - [ztk-versions.cfg](releases/3.1/ztk-versions.cfg)
