@@ -2,12 +2,12 @@
 # https://github.com/zopefoundation/meta/tree/master/config/toolkit
 [meta]
 template = "toolkit"
-commit-id = "9d7f315f"
+commit-id = "a0de4e93"
 
 [python]
 with-sphinx-doctests = false
 with-docs = true
-with-future-python = false
+with-future-python = true
 with-pypy = true
 with-macos = false
 with-windows = false
