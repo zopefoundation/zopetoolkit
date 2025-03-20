@@ -45,7 +45,7 @@ zope.principalregistry==5.1
 zope.processlifetime==3.1
 zope.proxy==6.1
 zope.ptresource==5.1
-zope.publisher==7.2
+zope.publisher==7.3
 zope.ramcache==3.1
 zope.schema==7.0.1
 zope.security==7.3
@@ -58,7 +58,7 @@ zope.structuredtext==5.0
 zope.tal==5.1
 zope.tales==6.1
 zope.testing==5.1
-zope.testrunner==7.0
+zope.testrunner==7.2
 zope.traversing==5.1
 zope.untrustedpython==6.1
 zope.viewlet==5.1
@@ -66,10 +66,10 @@ BTrees==6.1
 RestrictedPython==8.0
 ZConfig==4.2
 ZODB==6.0
-bcrypt==4.2.1
+bcrypt==4.3.0
 cffi==1.17.1
 multipart==1.2.1
-persistent==6.1
+persistent==6.1.1
 pycparser==2.22
 python-gettext==5.0
 pytz==2025.1
@@ -77,11 +77,11 @@ transaction==5.0
 zc.lockfile==3.0.post1
 zodbpickle==4.2
 six==1.17.0
-coverage==7.6.12
+coverage==7.7.0
 manuel==1.13.0
 collective.recipe.cmd==0.11
 mr.developer==2.0.2
 z3c.checkversions==2.1
-z3c.recipe.compattest==2.0
+z3c.recipe.compattest==3.0
 zc.recipe.egg==2.0.7
 zc.recipe.testrunner==3.1
