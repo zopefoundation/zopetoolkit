@@ -6,7 +6,7 @@ zope.browsermenu==5.1
 zope.browserpage==5.0
 zope.browserresource==5.2
 zope.cachedescriptors==5.1
-zope.catalog==5.0
+zope.catalog==5.1
 zope.component==6.0
 zope.componentvocabulary==3.0
 zope.configuration==6.0
@@ -51,7 +51,7 @@ zope.schema==7.0.1
 zope.security==7.3
 zope.securitypolicy==5.1
 zope.sendmail==6.2
-zope.session==5.1
+zope.session==5.2
 zope.site==5.1
 zope.size==5.1
 zope.structuredtext==5.0
