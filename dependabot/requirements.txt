@@ -63,7 +63,7 @@ zope.traversing==6.0
 zope.untrustedpython==7.0
 zope.viewlet==6.0
 BTrees==6.1
-RestrictedPython==8.0
+RestrictedPython==8.1
 ZConfig==4.2
 ZODB==6.1
 bcrypt==5.0.0
@@ -77,7 +77,7 @@ transaction==5.0
 zc.lockfile==4.0
 zodbpickle==4.2
 six==1.17.0
-coverage==7.10.7
+coverage==7.11.0
 manuel==1.13.0
 collective.recipe.cmd==0.11
 mr.developer==2.0.4
