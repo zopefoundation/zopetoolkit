@@ -2,7 +2,7 @@
 # https://github.com/zopefoundation/meta/tree/master/config/toolkit
 [meta]
 template = "toolkit"
-commit-id = "f97912cf"
+commit-id = "9d51a543"
 
 [python]
 with-sphinx-doctests = false
@@ -13,7 +13,6 @@ with-macos = false
 with-windows = false
 
 [tox]
-use-flake8 = true
 testenv-commands = [
     "{envdir}/bin/test-ztk {posargs:-cv}",
     ]

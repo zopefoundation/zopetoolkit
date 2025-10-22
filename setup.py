@@ -18,7 +18,6 @@ setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: Zope Public License",
-        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
@@ -27,7 +26,7 @@ setup(
         "Programming Language :: Python :: Implementation :: CPython",
     ],
     zip_safe=False,
-    python_requires='>=3.9',
+    python_requires='>=3.10',
     install_requires=[],
     entry_points={},
     packages=[],
