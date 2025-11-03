@@ -25,9 +25,9 @@ zope.event==6.0
 zope.exceptions==6.0
 zope.filerepresentation==7.0
 zope.formlib==7.0
-zope.hookable==8.0
+zope.hookable==8.1
 zope.i18n==6.0
-zope.i18nmessageid==8.0
+zope.i18nmessageid==8.1
 zope.index==8.0
 zope.interface==8.0.1
 zope.intid==6.0
@@ -48,7 +48,7 @@ zope.ptresource==6.0
 zope.publisher==8.0
 zope.ramcache==4.0
 zope.schema==8.1
-zope.security==8.1
+zope.security==8.2
 zope.securitypolicy==6.0
 zope.sendmail==7.0
 zope.session==6.0
@@ -62,7 +62,7 @@ zope.testrunner==8.1
 zope.traversing==6.0
 zope.untrustedpython==7.0
 zope.viewlet==6.0
-BTrees==6.1
+BTrees==6.2
 RestrictedPython==8.1
 ZConfig==4.2
 ZODB==6.1
