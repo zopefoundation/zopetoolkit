@@ -47,7 +47,7 @@ zope.proxy==7.0
 zope.ptresource==6.0
 zope.publisher==8.0
 zope.ramcache==4.0
-zope.schema==8.0
+zope.schema==8.1
 zope.security==8.1
 zope.securitypolicy==6.0
 zope.sendmail==7.0
@@ -83,5 +83,5 @@ collective.recipe.cmd==0.11
 mr.developer==2.0.4
 z3c.checkversions==3.0
 z3c.recipe.compattest==4.0
-zc.recipe.egg==3.0.0
+zc.recipe.egg==4.0.0a1
 zc.recipe.testrunner==4.0
