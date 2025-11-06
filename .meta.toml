@@ -7,7 +7,7 @@ commit-id = "ad3bfb10"
 [python]
 with-sphinx-doctests = false
 with-docs = true
-with-future-python = false
+with-future-python = true
 with-pypy = true
 with-macos = false
 with-windows = false
