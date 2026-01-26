@@ -1,8 +1,8 @@
-# Generated from:
-# https://github.com/zopefoundation/meta/tree/master/config/toolkit
+# Generated with zope.meta (https://zopemeta.readthedocs.io/) from:
+# https://github.com/zopefoundation/meta/tree/master/src/zope/meta/toolkit
 [meta]
 template = "toolkit"
-commit-id = "ad3bfb10"
+commit-id = "71befdf0"
 
 [python]
 with-sphinx-doctests = false
@@ -13,9 +13,7 @@ with-macos = false
 with-windows = false
 
 [tox]
-testenv-commands = [
-    "{envdir}/bin/test-ztk {posargs:-cv}",
-    ]
+testenv-commands = ["{envdir}/bin/test-ztk {posargs:-cv}"]
 testenv-additional = [
     "",
     "[testenv:checkversions]",
@@ -23,7 +21,7 @@ testenv-additional = [
     "    {envbindir}/buildout -nc {toxinidir}/buildout.cfg buildout:directory={envdir} install checkversions",
     "commands =",
     "    {envdir}/bin/checkversions ztk-versions.cfg []",
-    ]
+]
 
 [coverage]
 fail-under = "not applicable"
@@ -35,4 +33,4 @@ additional-ignores = [
     "docs/_build/html/*/*",
     "docs/_build/html/*/*/*",
     "docs/_build/html/*/*/*/*",
-    ]
+]
