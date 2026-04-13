@@ -9,7 +9,7 @@ zope.cachedescriptors==6.0
 zope.catalog==6.0
 zope.component==7.1
 zope.componentvocabulary==4.0
-zope.configuration==7.0
+zope.configuration==7.1
 zope.container==7.2
 zope.contentprovider==7.0
 zope.contenttype==6.0
@@ -29,7 +29,7 @@ zope.hookable==8.2
 zope.i18n==6.0
 zope.i18nmessageid==8.2
 zope.index==8.1
-zope.interface==8.2
+zope.interface==8.3
 zope.intid==6.0
 zope.keyreference==7.0
 zope.lifecycleevent==6.0
