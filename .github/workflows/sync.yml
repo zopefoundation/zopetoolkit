@@ -28,9 +28,9 @@ jobs:
         run: |
           vereqsyn ztk-versions.cfg dependabot/requirements.txt
       - name: Commit changes
-        uses: EndBug/add-and-commit@v10
-        with:
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
-          message: Version synchronization
-          add: '["ztk-versions.cfg", "dependabot/requirements.txt"]'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add ztk-versions.cfg dependabot/requirements.txt
+          git diff --cached --quiet || git commit -m "Version synchronization"
+          git push
