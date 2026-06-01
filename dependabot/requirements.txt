@@ -63,7 +63,7 @@ zope.traversing==6.0
 zope.untrustedpython==7.0
 zope.viewlet==6.0
 BTrees==6.4
-RestrictedPython==8.1
+RestrictedPython==8.3a1.dev0
 ZConfig==4.3
 ZODB==6.3
 bcrypt==5.0.0
