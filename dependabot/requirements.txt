@@ -79,7 +79,7 @@ zodbpickle==4.4
 six==1.17.0
 coverage==7.15.4
 manuel==1.13.0
-collective.recipe.cmd==0.11
+collective.recipe.cmd==1.0.0
 mr.developer==2.0.4
 z3c.recipe.compattest==4.1.1
 zc.recipe.egg==4.0.0
