@@ -112,7 +112,7 @@ Topic proposals
 ---------------
 
 - Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
-  better maintenance/release management/communication/marketing. 
+  better maintenance/release management/communication/marketing.
 
 - Christian Theune: I'd like us to ponder how we can (in addition to the
   housekeeping and cleanups we do) also move to do constructive work together
@@ -120,5 +120,3 @@ Topic proposals
   implementing new technologies together, like supporting HTML 5 in the
   various parts? I'd like to start putting in new code in the foreseeable
   future in the zope.* namespace.
-
-

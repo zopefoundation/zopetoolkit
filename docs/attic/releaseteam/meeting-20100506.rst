@@ -62,7 +62,7 @@ Open points
 -----------
 
 - Look at Tres's list of packages in all three frameworks, decide on a way to
-  drop things from the initial ZTK set and on a process for the future. 
+  drop things from the initial ZTK set and on a process for the future.
 
 - Look at and update http://docs.zope.org/zopetoolkit/about/coreextra.html for
   adding/removing policies, probably have a deprecated.cfg file

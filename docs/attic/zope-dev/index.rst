@@ -1,4 +1,4 @@
-Weekly Zope developer meetings 
+Weekly Zope developer meetings
 ==============================
 
 .. toctree::

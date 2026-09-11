@@ -9,7 +9,7 @@ that your 'somemod' directory needs to have a 'tests' subdirectory,
 and that that subdirectory must have a (normally empty) '__init__.py'
 file in it.
 
-In your unit test class, begin all unit test methods with the string 
+In your unit test class, begin all unit test methods with the string
 'test'.
 If you use the CleanUp class support, make sure that your 'setUp'
 and 'tearDown' methods call the CleanUp class's 'setUp' and
@@ -41,7 +41,7 @@ one class per Interface.
 
 Within the unit tests themselves, the Zope style is to use
 the positive rather than the double negative assertions.
-Thus, use ``assertEqual`` rather than ``failUnlessEqual``, 
+Thus, use ``assertEqual`` rather than ``failUnlessEqual``,
 ``assertRaises`` rather than ``failUnlessRaises``, and ``assert_``
 rather than ``failUnless``.  (Yes, ``assert_`` is an ugly name,
 but it is still preferred.)
