@@ -298,7 +298,7 @@ or tag):
     * ``description`` should be a one-sentence description of the
       package while ``long_description`` is best taken from the
       ``README.rst`` file as demonstrated.  You may also include the
-      changelog in ``long_description`` by concatenating ``README.rst
+      changelog in ``long_description`` by concatenating ``README.rst``
       and ``CHANGES.rst``.
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
