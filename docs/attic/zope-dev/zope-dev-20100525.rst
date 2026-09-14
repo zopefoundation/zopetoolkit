@@ -67,7 +67,7 @@ Topic proposals
   people can follow.
 
 - Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
-  better maintenance/release management/communication/marketing. 
+  better maintenance/release management/communication/marketing.
 
 - Christian Theune: I'd like us to ponder how we can (in addition to the
   housekeeping and cleanups we do) also move to do constructive work together
@@ -146,7 +146,7 @@ for every change. Having releases shortly after a bug day (like Tres did)
 seems reasonable.
 
 We also would like to have some metrics that show what happened on a bug day.
-Various options were raised: 
+Various options were raised:
 
 - note bugs that have been worked on in the wiki
 - tag bugs with a unique tag

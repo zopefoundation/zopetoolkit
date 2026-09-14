@@ -14,13 +14,13 @@ The IRC log is available here:
 Attendees
 ---------
 
-Charlie Clark, Christian Theune, Adam Groszer, Matthew Wilkes, Patrick Gerken, 
+Charlie Clark, Christian Theune, Adam Groszer, Matthew Wilkes, Patrick Gerken,
 
 DZUG conference / summit preparation
 ------------------------------------
 
-Charlie mentioned that the conference could use a bit more publicity. He 
-volunteered to ensure we geta link from pycon.org  to the conference homepage. 
+Charlie mentioned that the conference could use a bit more publicity. He
+volunteered to ensure we geta link from pycon.org  to the conference homepage.
 Christian Theune agreed to send mails to the related mailing lists that were
 mentioned.
 
@@ -53,7 +53,7 @@ Wineggbuilder
 
 Adam has published documentation about the windows buildbot/wineggbuilder that
 is paid for by the foundation:
-http://docs.zope.org/zopetoolkit/process/winbotsetup.html 
+http://docs.zope.org/zopetoolkit/process/winbotsetup.html
 
 In addition to the technical details Adam agreed to provide some introductory
 information that tells developers what this service is for and how to deal
@@ -131,7 +131,7 @@ Topic proposals
 ---------------
 
 - Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
-  better maintenance/release management/communication/marketing. 
+  better maintenance/release management/communication/marketing.
 
 - Christian Theune: I'd like us to ponder how we can (in addition to the
   housekeeping and cleanups we do) also move to do constructive work together

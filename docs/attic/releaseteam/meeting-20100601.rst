@@ -30,7 +30,7 @@ Buildslaves testing the ZTK on required platforms
   will be somewhat busy the coming period, so these slaves might need to wait a
   little more. Unless of course someone else sets up slaves.
 
-- Note that the buildslaves set up by THA test the``released`` packages and
+- Note that the buildslaves set up by THA test the ``released`` packages and
   thus should not need a compiler installed. So, an MSDN license is not
   necessary for these slaves.
 

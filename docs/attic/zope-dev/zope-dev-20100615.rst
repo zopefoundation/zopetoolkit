@@ -28,7 +28,7 @@ A survey on zope-dev showed that the other developers who asked for a license
 didn't receive theirs, yet.
 
 Adam continues to work on the VM setup at rackspace, preparing the eggbuilder
-and buildout slaves. 
+and buildout slaves.
 
 Supporting Python 2.7
 ---------------------
@@ -114,7 +114,7 @@ Topic proposals
 ---------------
 
 - Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
-  better maintenance/release management/communication/marketing. 
+  better maintenance/release management/communication/marketing.
 
 - Christian Theune: I'd like us to ponder how we can (in addition to the
   housekeeping and cleanups we do) also move to do constructive work together

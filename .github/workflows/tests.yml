@@ -41,7 +41,8 @@ jobs:
       with:
         persist-credentials: false
     - name: Install uv + caching
-      uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d  # version: 10.0.1
+      # astral/setup-uv@10.0.1
+      uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
       with:
         enable-cache: true
         cache-dependency-glob: |
@@ -85,4 +86,3 @@ jobs:
       with:
         name: zopetoolkit.tar.gz
         path: dist/*gz
-

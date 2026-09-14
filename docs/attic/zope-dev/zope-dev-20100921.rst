@@ -9,7 +9,7 @@ Summary
 =======
 
 The IRC log is available here:
-   http://zope3.pov.lt/irclogs-zope/%23zope.2010-09-21.log.html#t2010-09-21T18:00:27 
+   http://zope3.pov.lt/irclogs-zope/%23zope.2010-09-21.log.html#t2010-09-21T18:00:27
 
 Attendees
 ---------
@@ -26,7 +26,7 @@ Hanno noted that he shared his thoughts with the rest of Jarn. Publicly
 they're happy to have not used Zope 3 and grok but find Plone and repoze.bfg
 being good choices as their "platforms".
 
-Christian reported that he started an experiment together with Wolfgang 
+Christian reported that he started an experiment together with Wolfgang
 to take what we have with the ZCA and apply this and other patterns
 (specifically the "Ports and adapters" pattern) to form a set of procedures and software to help
 developers to better model their applications and stay flexible with the
@@ -111,7 +111,7 @@ Topic proposals
 ---------------
 
 - Chris McDonough: Pondering *some* (re-)structuring of the ZTK to allow for
-  better maintenance/release management/communication/marketing. 
+  better maintenance/release management/communication/marketing.
 
 - Christian Theune: I'd like us to ponder how we can (in addition to the
   housekeeping and cleanups we do) also move to do constructive work together

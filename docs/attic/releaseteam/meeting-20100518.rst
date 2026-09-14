@@ -34,8 +34,8 @@ Buildslaves testing the ZTK on required platforms
   correct Windows licenses.
 
 - ccomb has setup a buildbot for testing ZTK against released packages (not
-  SVN) on 32-bit linux. He will wake it up and have the reports send to zope-
-  test as well.
+  SVN) on 32-bit linux. He will wake it up and have the reports send to
+  zope-test as well.
 
 Deprecating packages from ztk.cfg and zopeapp.cfg
 

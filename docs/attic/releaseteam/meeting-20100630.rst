@@ -31,15 +31,15 @@ ZTK alpha release.
   All of the packages in these two lists have been removed from the ZTK.
 
 - There was a long discussion about the usefulness of a custom ZTK package
-  index besides the ``*.cfg`` files that depict the packages versions. Buildout-
-  based projects do not require a custom index, only the version files. "Easy-
-  install"-based projects though will need a custom index to control the
-  versions of the packages that get installed.
+  index besides the ``*.cfg`` files that depict the packages versions.
+  Buildout-based projects do not require a custom index, only the version
+  files. "Easy-install"-based projects though will need a custom index to
+  control the versions of the packages that get installed.
 
   However, it was questioned whether the custom index should contain packages
   that are not managed as part of the ZTK, but still are dependencies of the
-  ZTK (ZODB is such a prominent example) as it would impose too much version-
-  policy on consumers of the index.
+  ZTK (ZODB is such a prominent example) as it would impose too much
+  version-policy on consumers of the index.
 
   The releaseteam is not sure this is actually the case, but, since the members
   of the releaseteam all represent buildout-based projects, the releaseteam

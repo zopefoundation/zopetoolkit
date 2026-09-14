@@ -34,7 +34,7 @@ quick way to note decisions first.
 * We can consider removing extra dependencies for particular Zope
   Toolkit packages in order to make the dependency graph easier to
   reason about. We will do this on a case by case basis though.
-  
+
 * In namespace package's ``__init__.py`` we have been using the following
   boilerplate code::
 
@@ -45,7 +45,7 @@ quick way to note decisions first.
         import pkgutil
         __path__ = pkgutil.extend_path(__path__, __name__)
 
-  Since ``setuptools`` is a dependency of our packages anyway, we 
+  Since ``setuptools`` is a dependency of our packages anyway, we
   can instead do the following::
 
       __import__('pkg_resources').declare_namespace(__name__)
@@ -143,7 +143,7 @@ quick way to note decisions first.
 
   * A ``from .. import ..`` is immediately comprehensible to any
     Python programmer as well as tools.
-  
+
   * Deprecation warnings make it hard to write a library that supports
     multiple versions of another library; a change in an indirect
     dependency can create deprecation warnings that the original
