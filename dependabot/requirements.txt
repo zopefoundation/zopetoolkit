@@ -72,7 +72,7 @@ multipart==2.0.0
 persistent==6.8
 pycparser==3.0
 python-gettext==5.0
-pytz==2026.3.post1
+pytz==2026.4
 transaction==5.1
 zc.lockfile==4.0
 zodbpickle==4.5
