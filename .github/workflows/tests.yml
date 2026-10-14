@@ -24,7 +24,6 @@ jobs:
         config:
         # [Python version, tox env]
         - ["3.11", "release-check"]
-        - ["3.10", "py310"]
         - ["3.11", "py311"]
         - ["3.12", "py312"]
         - ["3.13", "py313"]
@@ -41,7 +40,8 @@ jobs:
       with:
         persist-credentials: false
     - name: Install uv + caching
-      uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7  # version: 10.2.0
+      # astral/setup-uv@10.0.1
+      uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
       with:
         enable-cache: true
         cache-dependency-glob: |
@@ -61,7 +61,7 @@ jobs:
     - name: Build package artifacts
       if: >
         matrix.os[0] == 'ubuntu'
-        && matrix.config[1] == 'py314'
+        && matrix.config[1] == 'py315'
       run: |
         rm -f dist/*
         pip install -U packaging "setuptools >= 78.1.1,< 82" wheel twine
@@ -71,7 +71,7 @@ jobs:
     - name: Upload package wheel
       if: >
         matrix.os[0] == 'ubuntu'
-        && matrix.config[1] == 'py314'
+        && matrix.config[1] == 'py315'
       uses: actions/upload-artifact@v7
       with:
         name: zopetoolkit.whl
@@ -80,7 +80,7 @@ jobs:
     - name: Upload package source distribution
       if: >
         matrix.os[0] == 'ubuntu'
-        && matrix.config[1] == 'py314'
+        && matrix.config[1] == 'py315'
       uses: actions/upload-artifact@v7
       with:
         name: zopetoolkit.tar.gz
