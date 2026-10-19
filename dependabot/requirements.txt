@@ -1,5 +1,5 @@
 zope.annotation==6.0
-zope.applicationcontrol==6.0
+zope.applicationcontrol==6.1
 zope.authentication==6.0
 zope.browser==4.0
 zope.browsermenu==6.0
@@ -25,11 +25,11 @@ zope.event==6.2
 zope.exceptions==6.0
 zope.filerepresentation==7.0
 zope.formlib==7.1
-zope.hookable==8.3
+zope.hookable==8.4
 zope.i18n==6.0
 zope.i18nmessageid==8.3
 zope.index==8.2
-zope.interface==8.6
+zope.interface==8.7
 zope.intid==6.0
 zope.keyreference==7.0
 zope.lifecycleevent==6.0
@@ -65,7 +65,7 @@ zope.viewlet==6.0
 BTrees==6.5
 RestrictedPython==8.5
 ZConfig==4.3
-ZODB==6.3
+ZODB==6.4
 bcrypt==5.0.0
 cffi==2.1.1
 multipart==2.0.1
@@ -83,4 +83,4 @@ collective.recipe.cmd==1.0.0
 mr.developer==3.0.0
 z3c.recipe.compattest==4.1.1
 zc.recipe.egg==6.0.0
-zc.recipe.testrunner==4.2.post1
+zc.recipe.testrunner==5.0
