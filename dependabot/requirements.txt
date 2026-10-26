@@ -11,7 +11,7 @@ zope.component==7.1
 zope.componentvocabulary==4.0
 zope.configuration==7.1
 zope.container==7.3
-zope.contentprovider==7.0
+zope.contentprovider==7.1
 zope.contenttype==6.0
 zope.copy==6.0
 zope.copypastemove==6.0
@@ -27,7 +27,7 @@ zope.filerepresentation==7.0
 zope.formlib==7.1
 zope.hookable==8.4
 zope.i18n==6.0
-zope.i18nmessageid==8.3
+zope.i18nmessageid==8.4
 zope.index==8.2
 zope.interface==8.7
 zope.intid==6.0
@@ -38,7 +38,7 @@ zope.login==4.0
 zope.mimetype==4.1
 zope.minmax==4.0
 zope.pagetemplate==6.1
-zope.password==6.1
+zope.password==6.2
 zope.pluggableauth==5.1
 zope.principalannotation==6.0
 zope.principalregistry==6.0
@@ -70,14 +70,14 @@ bcrypt==5.0.0
 cffi==2.1.1
 multipart==2.0.1
 persistent==6.8
-pycparser==3.11
+pycparser==3.12
 python-gettext==5.0
 pytz==2026.5
 transaction==5.1
 zc.lockfile==4.0
 zodbpickle==4.5
 six==1.17.0
-coverage==7.16.2
+coverage==7.17.0
 manuel==1.13.0
 collective.recipe.cmd==1.0.0
 mr.developer==3.0.0
